@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+
+body{
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  display: block;
+  background-color: #edf1f2;
+  font-family: Open Sans,sans-serif;
+}
+
+.top_header {
+  background-color:rgb(30, 38, 44);
+  height:450px;
+  min-height:450px;
+  position:relative;
+  width:100%;
+  margin: 0;
+  padding: 0;
+}
+
+.top_header_image {
+  background-image:url(https://lh3.googleusercontent.com/proxy/Bf0uiN-whY0ogASwoQt_nERgCVCZoi_WlA7JJMI0jOsEWDeDpJlNn-d5Rkvde4qStjA7cxfhnagz9h5PDHNCFevVGNZsapFIowOExVw66vAtZ2bdC2gC2jXHO9-oNlFboB82hBH7dsJWSRYdoZyco_P5XP_P3jJVit5BPedaEg);
+  background-position-x:35%;
+  background-position-y:0%;
+  background-size:cover;
+  display:block;
+  height:450px;
+  position:absolute;
+  width:100%;
+}
+
+.buttons {
+  background-color: #1e262c;
+  height: 70px;
+  width: 100%;
+}
+
+.button {
+  background-color: inherit;
+  color: #e1e2e4;
+  border: none;
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+  height: 64px; 
+  padding: 0px 20px;
+}
+
+.button:hover {
+  background-color: #2e363d;
+}
+
+.card {
+  border-radius: 8px;
+  background-color: white;
+  margin: 22px;
+  padding: 8px 22px;
+  border: 1px solid #dfe4e5;
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.05);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.05);
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.05);
+}
+
+.column {
+  column-count: 3;
+}
+
+h3 {
+  padding: 0px 22px;
+}
+
+.screens_grid {
+  display: -moz-grid;
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 315px);
+  grid-gap: 15px;  
+  margin: 0px 22px;
+}
+
+.screen {
+  width: 314.65px;
+  height: 176.99px;
+  -moz-background-size: 100%;
+  -webkit-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  empty-cells: hide;
+  font-family: Open Sans,sans-serif;
+}
+
+th {
+  padding: 12px 8px;
+}
+
+td {
+  padding: 10px 6px;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 0 20px;
+  margin-bottom: 10px;
+  background: #E9EFF6;
+  line-height: 40px;
+  border-width: 0;
+  border-radius: 20px;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  padding: 0 20px;
+  margin-bottom: 10px;
+  background: #E9EFF6;
+  line-height: 20px;
+  border-width: 0;
+  border-radius: 20px;
+}
+
+input[type="submit"] {
+  margin-top: 30px;
+  background: #f69a73;
+  border-bottom: 4px solid #d87d56;
+  color: white;
+  font-size: 14px;
+}
+
+#overlay_image {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  position: absolute;
+  display: none;
+  z-index: 100;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+#overlay_image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+</style>
+<body>
+
+<div id="overlay_image" onclick="close_overlay()"></div>
+
+<section class="top_header">
+  <div class="top_header_image"></div>
+</section>
+
+<div class="buttons">
+	<a href="#screens"><button class="button">Скриншоты и видеоролики</button></a>
+	<a href="#info"><button class="button">Описание</button></a>
+	<a href="#system"><button class="button">Системные требования</button></a>
+	<a href="#feedback"><button class="button">Обратная связь</button></a>
+	<a href="https://store.steampowered.com/app/730/CounterStrike_Global_Offensive/?l=russian" target="_blank"><button class="button">Получить игру</button></a>
+</div>
+
+<div>
+
+<div id="screens">
+<h3> Скриншоты и видеоролики </h3>
+<div class="screens_grid">
+  <iframe width="314.65px" height="176.99px" src="https://www.youtube.com/embed/edYCtaNueQY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <img onclick="open_overlay(event)" class="screen" src="https://steamcdn-a.akamaihd.net/steam/apps/730/ss_34090867f1a02b6c17652ba9043e3f622ed985a9.1920x1080.jpg?t=1585696022"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://steamcdn-a.akamaihd.net/steam/apps/730/ss_1d30c9a215fd621e2fd74f40d93b71587bf6409c.1920x1080.jpg?t=1585696022"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://steamcdn-a.akamaihd.net/steam/apps/730/ss_baa02e979cd3852e3c4182afcd603ab64e3502f9.1920x1080.jpg?t=1585696022"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://steamcdn-a.akamaihd.net/steam/apps/730/ss_d87c102d028d545c877363166c9d8377014f0c23.1920x1080.jpg?t=1585696022"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://steamcdn-a.akamaihd.net/steam/apps/730/ss_ffe584c163a2b16e9c1b733b1c8e2ba669fb1204.1920x1080.jpg?t=1585696022"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://steamcdn-a.akamaihd.net/steam/apps/730/ss_74c1a0264ceaf57e5fb51d978205045223b48a18.1920x1080.jpg?t=1585696022"/>
+</div>
+</div>
+
+<div id="info">
+<h3> Описание </h3>
+<div class="card column">
+  <p>Counter-Strike: Global Offensive (CS: GO) возрождает ураганную командную игру, впервые представленную еще 19 лет назад.</p>
+  <p>CS: GO включает в себя новые карты, персонажей, оружие, игровые режимы, а также улучшенную версию классической составляющей CS (de_dust и т.п.).</p>
+</div>
+</div>
+
+<div id="system">
+<h3> Системные требования </h3>
+<div class="card">
+  <table>
+    <tr>
+      <th></th>
+      <th>МИНИМАЛЬНЫЕ СИСТЕМНЫЕ ТРЕБОВАНИЯ</th>
+      <th>РЕКОМЕНДУЕМЫЕ СИСТЕМНЫЕ ТРЕБОВАНИЯ</th>
+    </tr>
+    <tr>
+      <td>OC</td>
+      <td>Windows 7/Vista/XP</td>
+      <td>Windows 7/Vista/XP</td>
+    </tr>
+    <tr>
+      <td>Процессор (AMD)</td>
+      <td>AMD Phenom X3 8750</td>
+      <td>AMD Phenom II X3</td>
+    </tr>
+    <tr>
+      <td>Процессор (Intel)</td>
+      <td>Intel Core 2 Duo E6600</td>
+      <td>Intel Core i3</td>
+    </tr>
+    <tr>
+      <td>ОЗУ</td>
+      <td>2 ГБ</td>
+      <td>4 ГБ</td>
+    </tr>
+    <tr>
+      <td>Видеокарта</td>
+      <td>Видеокарта должна иметь объем видеопамяти не меньше 256 Мб</td>
+      <td>NVIDIA GTX 1050 2 ГБ</td>
+    </tr>
+    <tr>
+    <tr>
+      <td>DirectX</td>
+      <td>DirectX версии 9.0c</td>
+      <td>DirectX версии 9.0c</td>
+    </tr>
+    <tr>
+      <td>Жесткий диск</td>
+      <td>15 ГБ</td>
+      <td>15 ГБ</td>
+    </tr>
+	</table>
+</div>
+</div>
+
+<div id="feedback">
+<h3> Обратная связь </h3>
+<div class="card centered">
+  <form>
+    <h4> Написать нам </h4>
+	<input type="text" placeholder="Ваше имя"/>
+	<input type="email" placeholder="Email"/>
+	<textarea placeholder="Сообщение..." rows="3"></textarea>
+	<input style="cursor: pointer;" type="submit" value="Отправить"/>
+  </form>  
+</div>
+</div>
+
+</div>
+
+<script>
+function close_overlay() {
+  document.getElementById('overlay_image').style.display = "none";
+  
+  window.onscroll = function() {};
+}
+function open_overlay(evt) {
+  document.getElementById('overlay_image').style.display = "block";
+  document.getElementById('overlay_image').innerHTML = '<img src='+evt.currentTarget.src+' width="70%"/>';
+  
+  window.scrollTo(0, 0); 
+  scrollTop = window.pageYOffset || document.documentElement.scrollTop; 
+  scrollLeft = window.pageXOffset || document.documentElement.scrollLeft, 
+  window.onscroll = function() { 
+    window.scrollTo(scrollLeft, scrollTop); 
+  }; 
+}
+</script>
+
+</body>
+</html>

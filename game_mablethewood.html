@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+
+body{
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  display: block;
+  background-color: #edf1f2;
+  font-family: Open Sans,sans-serif;
+}
+
+.top_header {
+  background-color:rgb(30, 38, 44);
+  height:450px;
+  min-height:450px;
+  position:relative;
+  width:100%;
+  margin: 0;
+  padding: 0;
+}
+
+.top_header_image {
+  background-image:url('https://data3.origin.com/asset/content/dam/originx/web/app/games/mable-and-the-wood/mable-and-the-wood/gdp/matw_gdp-bg_2400%C3%97600.jpg/8cd01efe-95b6-4022-969f-0e8cff30c1dd/original.jpg');
+  background-position-x:35%;
+  background-position-y:0%;
+  background-size:cover;
+  display:block;
+  height:450px;
+  position:absolute;
+  width:100%;
+}
+
+.buttons {
+  background-color: #1e262c;
+  height: 70px;
+  width: 100%;
+}
+
+.button {
+  background-color: inherit;
+  color: #e1e2e4;
+  border: none;
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+  height: 64px; 
+  padding: 0px 20px;
+}
+
+.button:hover {
+  background-color: #2e363d;
+}
+
+.card {
+  border-radius: 8px;
+  background-color: white;
+  margin: 22px;
+  padding: 8px 22px;
+  border: 1px solid #dfe4e5;
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.05);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.05);
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.05);
+}
+
+.column {
+  column-count: 3;
+}
+
+h3 {
+  padding: 0px 22px;
+}
+
+.screens_grid {
+  display: -moz-grid;
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 315px);
+  grid-gap: 15px;  
+  margin: 0px 22px;
+}
+
+.screen {
+  width: 314.65px;
+  height: 176.99px;
+  -moz-background-size: 100%;
+  -webkit-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  empty-cells: hide;
+  font-family: Open Sans,sans-serif;
+}
+
+th {
+  padding: 12px 8px;
+}
+
+td {
+  padding: 10px 6px;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 0 20px;
+  margin-bottom: 10px;
+  background: #E9EFF6;
+  line-height: 40px;
+  border-width: 0;
+  border-radius: 20px;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  padding: 0 20px;
+  margin-bottom: 10px;
+  background: #E9EFF6;
+  line-height: 20px;
+  border-width: 0;
+  border-radius: 20px;
+}
+
+input[type="submit"] {
+  margin-top: 30px;
+  background: #f69a73;
+  border-bottom: 4px solid #d87d56;
+  color: white;
+  font-size: 14px;
+}
+
+#overlay_image {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  position: absolute;
+  display: none;
+  z-index: 100;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+#overlay_image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+</style>
+<body>
+
+<div id="overlay_image" onclick="close_overlay()"></div>
+
+<section class="top_header">
+  <div class="top_header_image"></div>
+</section>
+
+<div class="buttons">
+	<a href="#screens"><button class="button">Скриншоты и видеоролики</button></a>
+	<a href="#info"><button class="button">Описание</button></a>
+	<a href="#system"><button class="button">Системные требования</button></a>
+	<a href="#feedback"><button class="button">Обратная связь</button></a>
+	<a href="https://www.origin.com/rus/ru-ru/store/mable-and-the-wood/mable-and-the-wood" target="_blank"><button class="button">Получить игру</button></a>
+</div>
+
+<div>
+
+<div id="screens">
+<h3> Скриншоты и видеоролики </h3>
+<div class="screens_grid">
+  <img onclick="open_overlay(event)" class="screen" src="https://data1.origin.com/asset/content/dam/originx/web/app/games/mable-and-the-wood/mable-and-the-wood/screens/matw_screenhi_1920x1080_en_US_01.jpg/b8aeb156-24de-4e24-b3d9-367ef8781dba/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data2.origin.com/asset/content/dam/originx/web/app/games/mable-and-the-wood/mable-and-the-wood/screens/matw_screenhi_1920x1080_en_US_02.jpg/b419089c-aca4-49f1-b825-c7aac4306c36/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data3.origin.com/asset/content/dam/originx/web/app/games/mable-and-the-wood/mable-and-the-wood/screens/matw_screenhi_1920x1080_en_US_03.jpg/3baac939-9582-42dc-bed2-5805622c3bfd/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data4.origin.com/asset/content/dam/originx/web/app/games/mable-and-the-wood/mable-and-the-wood/screens/matw_screenhi_1920x1080_en_US_04.jpg/837597a0-0b6a-4ed7-993b-12baf31f80f4/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data1.origin.com/asset/content/dam/originx/web/app/games/mable-and-the-wood/mable-and-the-wood/screens/matw_screenhi_1920x1080_en_US_05.jpg/29e558da-413d-414a-a0b3-7093cfd98a98/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data2.origin.com/asset/content/dam/originx/web/app/games/mable-and-the-wood/mable-and-the-wood/screens/matw_screenhi_1920x1080_en_US_06.jpg/29eff649-af26-4ab9-bc75-da824dad36bb/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data3.origin.com/asset/content/dam/originx/web/app/games/mable-and-the-wood/mable-and-the-wood/screens/matw_screenhi_1920x1080_en_US_07.jpg/79d7000e-e7a8-4e44-b665-e7ddb4e6253f/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data4.origin.com/asset/content/dam/originx/web/app/games/mable-and-the-wood/mable-and-the-wood/screens/matw_screenhi_1920x1080_en_US_08.jpg/dd2d7bfd-f1cb-4c67-a780-5c61b84c1e91/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data1.origin.com/asset/content/dam/originx/web/app/games/mable-and-the-wood/mable-and-the-wood/screens/matw_screenhi_1920x1080_en_US_09.jpg/7cc719c4-079b-4678-b6ac-b2bd378deb26/original.jpg"/>
+</div>
+</div>
+
+<div id="info">
+<h3> Описание </h3>
+<div class="card column">
+  <p>
+  Mable &amp; The Wood — игра в жанре метроидвании, в которой вы сможете принимать обличье убитых боссов. Это полностью меняет формат вашего взаимодействия с игровым миром, полным удивительных переплетений и взаимосвязей. Впрочем, убивать тут вовсе не обязательно.<br><br>
+  Вас воскресили адепты загадочного культа. Они рассказывают о связанном с вами древнем пророчестве. Оно гласит, что вы будете убивать Великих чудовищ, принимать их облик и использовать силы этих существ ради спасения гибнущего мира. Но что, если культисты ошиблись? В конце концов, этому пророчеству много лет, а со временем любые слова теряют смысл...<br><br>
+  Что делать, когда привычный мир рассыпается на части? В Mable &amp; The Wood выбор предстоит сделать вам. Можно пройти игру, не совершив ни единого убийства. А можно и убить абсолютно всех.<br><br>
+  Суждено ли вам развеять тьму или стать ее частью?<br><br>
+  <b>ДВИЖЕНИЕ — КЛЮЧ К ПОБЕДЕ</b><br>
+  Ваши движения смертоносны. Мейбл волочит за собой тяжелый меч, который не может поднять. Но в любой момент героиня может превратиться в фею и улететь, оставив клинок на месте. А затем снова сменить обличье и призвать клинок обратно в ладонь, рассекая на части всех, кто встретится на пути.<br><br>
+  Вы можете менять обличье лишь на короткое время, но делаетесь сильнее, убивая встреченных существ.<br><br>
+  <b>УБИВАЙТЕ ВЕЛИКИХ ЧУДОВИЩ И ПРИНИМАЙТЕ ИХ ОБЛИЧЬЕ</b><br>
+  Убивайте Великих чудовищ и принимайте их обличье. Превращайтесь в крота, медузу, паука и многих других существ...<br><br>
+  Найдите других боссов и победите их, чтобы завладеть и их силами тоже!<br><br>
+  <b>ИССЛЕДУЙТЕ ГИБНУЩИЙ МИРM</b><br>
+  Действие игры разворачивается в мире темного фэнтези. Каждая локация — часть огромного, сложного мира, полного удивительных загадок и секретов. Раскрыть их предстоит именно вам!<br><br>
+  Эти секреты откроют перед вами альтернативные способы прохождения, которые не требуют сражений. А еще вас ждет множество побочных сюжетных веток и несколько вариантов финала игры!<br><br>
+  <b>УЗНАЙТЕ, КТО ВЫ НА САМОМ ДЕЛЕ</b><br>
+  Изучите удивительную историю этого мира и найдите свое место в ней. Станете ли вы спасителем, которого так ждут все вокруг, или же буквально разорвете этот мир на части?<br><br>
+  <b>Ключевые особенности:</b><br>
+  <ul>
+  <li>Решать вам. Культисты хотят, чтобы вы убили всех, но вы вольны поступать по-своему. Сделайте так, как хотят они, или отыщите свой собственный путь и откройте множество альтернативных концовок.</li>
+  <li>Захватывающий сюжет с глубокими и объемными героями, каждый из которых играет свою роль в этом постапокалиптическом сценарии.</li>
+  <li>Движение — ключ к победе. Мейбл не может поднять свой волшебный меч, а потому вынуждена использовать его совершенно неожиданным образом.</li>
+  <li>Огромный и проработанный фэнтезийный мир, воплощенный с помощью современной пиксельной графики и потрясающего оригинального саундтрека.</li>
+  <li>Несколько вариантов концовки и множество путей, что приведут вас к секретам этого мира.</li>
+  </ul>
+  </p>
+</div>
+</div>
+
+<div id="system">
+<h3> Системные требования </h3>
+<div class="card">
+  <table>
+    <tr>
+      <td>OC</td>
+      <td>Windows 7, Windows 8, Windows 10</td>
+    </tr>
+    <tr>
+      <td>Процессор</td>
+      <td>двухъядерный с частотой 2 ГГц</td>
+    </tr>
+    <tr>
+      <td>ОЗУ</td>
+      <td>2 ГБ</td>
+    </tr>
+    <tr>
+      <td>Видеокарта</td>
+      <td>128 МБ видеопамяти</td>
+    </tr>
+    <tr>
+      <td>DirectX</td>
+      <td>версия 9.0</td>
+    </tr>
+    <tr>
+      <td>Жесткий диск</td>
+      <td>416 МБ</td>
+    </tr>
+	</table>
+</div>
+</div>
+
+<div id="feedback">
+<h3> Обратная связь </h3>
+<div class="card centered">
+  <form>
+    <h4> Написать нам </h4>
+	<input type="text" placeholder="Ваше имя"/>
+	<input type="email" placeholder="Email"/>
+	<textarea placeholder="Сообщение..." rows="3"></textarea>
+	<input style="cursor: pointer;" type="submit" value="Отправить"/>
+  </form>  
+</div>
+</div>
+
+</div>
+
+<script>
+function close_overlay() {
+  document.getElementById('overlay_image').style.display = "none";
+  
+  window.onscroll = function() {};
+}
+function open_overlay(evt) {
+  document.getElementById('overlay_image').style.display = "block";
+  document.getElementById('overlay_image').innerHTML = '<img src='+evt.currentTarget.src+' width="70%"/>';
+  
+  window.scrollTo(0, 0); 
+  scrollTop = window.pageYOffset || document.documentElement.scrollTop; 
+  scrollLeft = window.pageXOffset || document.documentElement.scrollLeft, 
+  window.onscroll = function() { 
+    window.scrollTo(scrollLeft, scrollTop); 
+  }; 
+}
+</script>
+
+</body>
+</html>

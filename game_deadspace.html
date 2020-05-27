@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+
+body{
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  display: block;
+  background-color: #edf1f2;
+  font-family: Open Sans,sans-serif;
+}
+
+.top_header {
+  background-color:rgb(30, 38, 44);
+  height:450px;
+  min-height:450px;
+  position:relative;
+  width:100%;
+  margin: 0;
+  padding: 0;
+}
+
+.top_header_image {
+  background-image:url(https://data4.origin.com/content/dam/originx/web/app/games/dead-space/dead-space/dead-space_gdp-bg.jpg);
+  background-position-x:35%;
+  background-position-y:0%;
+  background-size:cover;
+  display:block;
+  height:450px;
+  position:absolute;
+  width:100%;
+}
+
+.buttons {
+  background-color: #1e262c;
+  height: 70px;
+  width: 100%;
+}
+
+.button {
+  background-color: inherit;
+  color: #e1e2e4;
+  border: none;
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+  height: 64px; 
+  padding: 0px 20px;
+}
+
+.button:hover {
+  background-color: #2e363d;
+}
+
+.card {
+  border-radius: 8px;
+  background-color: white;
+  margin: 22px;
+  padding: 8px 22px;
+  border: 1px solid #dfe4e5;
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.05);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.05);
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.05);
+}
+
+.column {
+  column-count: 3;
+}
+
+h3 {
+  padding: 0px 22px;
+}
+
+.screens_grid {
+  display: -moz-grid;
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 315px);
+  grid-gap: 15px;  
+  margin: 0px 22px;
+}
+
+.screen {
+  width: 314.65px;
+  height: 176.99px;
+  -moz-background-size: 100%;
+  -webkit-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  empty-cells: hide;
+  font-family: Open Sans,sans-serif;
+}
+
+th {
+  padding: 12px 8px;
+}
+
+td {
+  padding: 10px 6px;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 0 20px;
+  margin-bottom: 10px;
+  background: #E9EFF6;
+  line-height: 40px;
+  border-width: 0;
+  border-radius: 20px;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  padding: 0 20px;
+  margin-bottom: 10px;
+  background: #E9EFF6;
+  line-height: 20px;
+  border-width: 0;
+  border-radius: 20px;
+}
+
+input[type="submit"] {
+  margin-top: 30px;
+  background: #f69a73;
+  border-bottom: 4px solid #d87d56;
+  color: white;
+  font-size: 14px;
+}
+
+#overlay_image {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  position: absolute;
+  display: none;
+  z-index: 100;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+#overlay_image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+</style>
+<body>
+
+<div id="overlay_image" onclick="close_overlay()"></div>
+
+<section class="top_header">
+  <div class="top_header_image"></div>
+</section>
+
+<div class="buttons">
+	<a href="#screens"><button class="button">Скриншоты и видеоролики</button></a>
+	<a href="#info"><button class="button">Описание</button></a>
+	<a href="#system"><button class="button">Системные требования</button></a>
+	<a href="#feedback"><button class="button">Обратная связь</button></a>
+	<a href="https://www.origin.com/rus/ru-ru/store/dead-space/dead-space" target="_blank"><button class="button">Получить игру</button></a>
+</div>
+
+<div>
+
+<div id="screens">
+<h3> Скриншоты и видеоролики </h3>
+<div class="screens_grid">
+  <iframe width="314.65px" height="176.99px" src="https://www.youtube.com/embed/Secfn81KB8k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <img onclick="open_overlay(event)" class="screen" src="https://u.kanobu.ru/screenshots/1afd5375-642d-4638-881c-a6d9f88481bc.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://u.kanobu.ru/screenshots/28c3a7b6-6d64-4c9c-88b5-4ded236c1213.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://u.kanobu.ru/screenshots/f60e07b6-0a03-4eab-a66b-6b64c4c59f53.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://u.kanobu.ru/screenshots/4b1e18ae-a92f-4c34-b8d5-a8f7c6dabf67.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://u.kanobu.ru/screenshots/1219f045-13e6-4ea1-a7cb-d38af749d1b5.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://u.kanobu.ru/screenshots/43c8a2c2-4a52-4a83-ac45-eb0bb4782a44.jpg"/>
+  <imgv class="screen" src="https://u.kanobu.ru/screenshots/e9757970-bb12-4740-b96e-f81dfe019519.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://u.kanobu.ru/screenshots/cda66855-89ab-4234-a7be-471dd1ebaea3.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://u.kanobu.ru/screenshots/8ef5b32a-9a47-4894-b2e8-d31ec1878439.jpg"/>
+</div>
+</div>
+
+<div id="info">
+<h3> Описание </h3>
+<div class="card column">
+  <p>Вы играете за Айзека Кларка, инженера космического корабля «Ишимура». Вы не воин. Вы не солдат. Но вы последняя линия защиты между оставшимися в живых членами корабля и беспощадными ожившими трупами. Ожившие мертвецы стали некроморфами, ужасными гибридами зомби и пришельцев, которым не страшны традиционные методы борьбы. К счастью, ваши средства нападения тоже уникальны, ведь вам доступны мощные горные инструменты, которые помогут вам устранить угрозу. </p>
+  <p>Особенности игры:</p>
+  <ul>
+    <li>Непредсказуемая угроза. Некроморфы не похожи на других врагов. Выстрелы в голову не наносят ущерба, а их хаотические передвижения делают ваши попытки укрыться бесполезными. Вам придется отрубать их насекомообразные конечности и всегда быть в полной готовности, чтобы нападать на врагов, которые могут приблизиться к вам с любой стороны. </li>
+    <li>Импровизированное оружие. Стреляйте горизонтальными или вертикальными зарядами энергии из плазменного резака, стреляйте лезвиями из трубореза и убивайте врагов другим уникальным оружием. </li>
+    <li>Непрекращающиеся действия. Враги могут напасть в любое время, даже когда вы перезаряжаетесь или просматриваете свой инвентарь. Будьте все время осторожны.</li>
+  </ul>
+  
+</div>
+</div>
+
+<div id="system">
+<h3> Системные требования </h3>
+<div class="card">
+  <table>
+    <tr>
+      <th></th>
+      <th>МИНИМАЛЬНЫЕ СИСТЕМНЫЕ ТРЕБОВАНИЯ</th>
+      <th>РЕКОМЕНДУЕМЫЕ СИСТЕМНЫЕ ТРЕБОВАНИЯ</th>
+    </tr>
+    <tr>
+      <td>OC</td>
+      <td>64-разрядная версия Windows 7/8.1/10</td>
+      <td>64-разрядная версия Windows 7/8.1/10</td>
+    </tr>
+    <tr>
+      <td>Процессор (AMD)</td>
+      <td>Процессор с частотой 2,8 ГГц или аналогичный</td>
+      <td>Процессор с частотой 2,8 ГГц или аналогичный</td>
+    </tr>
+    <tr>
+      <td>Процессор (Intel)</td>
+      <td>Процессор с частотой 2,8 ГГц или аналогичный</td>
+      <td>Процессор с частотой 2,8 ГГц или аналогичный</td>
+    </tr>
+    <tr>
+      <td>ОЗУ</td>
+      <td>1 ГБ</td>
+      <td>2 ГБ</td>
+    </tr>
+    <tr>
+      <td>Видеокарта (AMD)</td>
+      <td>Требуется видеокарта с 256 Мб видеопамяти и поддержкой шейдерной модели 3.0</td>
+      <td>Требуется видеокарта с 256 Мб видеопамяти и поддержкой шейдерной модели 3.0</td>
+    </tr>
+    <tr>
+      <td>Видеокарта (NVIDIA)</td>
+      <td>Требуется видеокарта с 256 Мб видеопамяти и поддержкой шейдерной модели 3.0</td>
+      <td>Требуется видеокарта с 256 Мб видеопамяти и поддержкой шейдерной модели 3.0</td>
+    </tr>
+    <tr>
+      <td>DirectX</td>
+      <td>DirectX 9.0c</td>
+      <td>DirectX 9.0c</td>
+    </tr>
+    <tr>
+      <td>Жесткий диск</td>
+      <td>8 ГБ</td>
+      <td>8 ГБ</td>
+    </tr>
+	</table>
+</div>
+</div>
+
+<div id="feedback">
+<h3> Обратная связь </h3>
+<div class="card centered">
+  <form>
+    <h4> Написать нам </h4>
+	<input type="text" placeholder="Ваше имя"/>
+	<input type="email" placeholder="Email"/>
+	<textarea placeholder="Сообщение..." rows="3"></textarea>
+	<input style="cursor: pointer;" type="submit" value="Отправить"/>
+  </form>  
+</div>
+</div>
+
+</div>
+
+<script>
+function close_overlay() {
+  document.getElementById('overlay_image').style.display = "none";
+  
+  window.onscroll = function() {};
+}
+function open_overlay(evt) {
+  document.getElementById('overlay_image').style.display = "block";
+  document.getElementById('overlay_image').innerHTML = '<img src='+evt.currentTarget.src+' width="70%"/>';
+  
+  window.scrollTo(0, 0); 
+  scrollTop = window.pageYOffset || document.documentElement.scrollTop; 
+  scrollLeft = window.pageXOffset || document.documentElement.scrollLeft, 
+  window.onscroll = function() { 
+    window.scrollTo(scrollLeft, scrollTop); 
+  }; 
+}
+</script>
+
+</body>
+</html>

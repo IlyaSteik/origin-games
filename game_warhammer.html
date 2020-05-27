@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+
+body{
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  display: block;
+  background-color: #edf1f2;
+  font-family: Open Sans,sans-serif;
+}
+
+.top_header {
+  background-color:rgb(30, 38, 44);
+  height:450px;
+  min-height:450px;
+  position:relative;
+  width:100%;
+  margin: 0;
+  padding: 0;
+}
+
+.top_header_image {
+  background-image:url('https://data3.origin.com/asset/content/dam/originx/web/app/games/warhammer/warhammer-40000-mechanicus/gdp/warhammer-40k-mechanicus_gdp-bg_2400%C3%97600.jpg/46a4fb07-aa17-4eca-b91f-ada886fc5d08/original.jpg');
+  background-position-x:35%;
+  background-position-y:0%;
+  background-size:cover;
+  display:block;
+  height:450px;
+  position:absolute;
+  width:100%;
+}
+
+.buttons {
+  background-color: #1e262c;
+  height: 70px;
+  width: 100%;
+}
+
+.button {
+  background-color: inherit;
+  color: #e1e2e4;
+  border: none;
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+  height: 64px; 
+  padding: 0px 20px;
+}
+
+.button:hover {
+  background-color: #2e363d;
+}
+
+.card {
+  border-radius: 8px;
+  background-color: white;
+  margin: 22px;
+  padding: 8px 22px;
+  border: 1px solid #dfe4e5;
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.05);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.05);
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.05);
+}
+
+.column {
+  column-count: 3;
+}
+
+h3 {
+  padding: 0px 22px;
+}
+
+.screens_grid {
+  display: -moz-grid;
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 315px);
+  grid-gap: 15px;  
+  margin: 0px 22px;
+}
+
+.screen {
+  width: 314.65px;
+  height: 176.99px;
+  -moz-background-size: 100%;
+  -webkit-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  empty-cells: hide;
+  font-family: Open Sans,sans-serif;
+}
+
+th {
+  padding: 12px 8px;
+}
+
+td {
+  padding: 10px 6px;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 0 20px;
+  margin-bottom: 10px;
+  background: #E9EFF6;
+  line-height: 40px;
+  border-width: 0;
+  border-radius: 20px;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  padding: 0 20px;
+  margin-bottom: 10px;
+  background: #E9EFF6;
+  line-height: 20px;
+  border-width: 0;
+  border-radius: 20px;
+}
+
+input[type="submit"] {
+  margin-top: 30px;
+  background: #f69a73;
+  border-bottom: 4px solid #d87d56;
+  color: white;
+  font-size: 14px;
+}
+
+#overlay_image {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  position: absolute;
+  display: none;
+  z-index: 100;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+#overlay_image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+</style>
+<body>
+
+<div id="overlay_image" onclick="close_overlay()"></div>
+
+<section class="top_header">
+  <div class="top_header_image"></div>
+</section>
+
+<div class="buttons">
+	<a href="#screens"><button class="button">Скриншоты и видеоролики</button></a>
+	<a href="#info"><button class="button">Описание</button></a>
+	<a href="#system"><button class="button">Системные требования</button></a>
+	<a href="#feedback"><button class="button">Обратная связь</button></a>
+	<a href="https://www.origin.com/rus/ru-ru/store/warhammer/warhammer-40000-mechanicus" target="_blank"><button class="button">Получить игру</button></a>
+</div>
+
+<div>
+
+<div id="screens">
+<h3> Скриншоты и видеоролики </h3>
+<div class="screens_grid">
+  <img onclick="open_overlay(event)" class="screen" src="https://data1.origin.com/asset/content/dam/originx/web/app/games/warhammer/warhammer-40000-mechanicus/screens/Mechanicus_Release_01.jpg/77f93c79-a970-411f-9ef2-f5122a116d8a/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data2.origin.com/asset/content/dam/originx/web/app/games/warhammer/warhammer-40000-mechanicus/screens/Mechanicus_Release_02.jpg/39737d87-9fff-4711-8681-72aa139f2a61/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data3.origin.com/asset/content/dam/originx/web/app/games/warhammer/warhammer-40000-mechanicus/screens/Mechanicus_Release_03.jpg/d5d93c9c-d07f-4a2b-9708-fe7953bf351c/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data4.origin.com/asset/content/dam/originx/web/app/games/warhammer/warhammer-40000-mechanicus/screens/Mechanicus_Release_04.jpg/79c65b0d-83c3-45be-9417-8e7f6deb9abd/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data1.origin.com/asset/content/dam/originx/web/app/games/warhammer/warhammer-40000-mechanicus/screens/Mechanicus_Release_05.jpg/c0e5a35e-8da8-415b-b30d-5d1326deb810/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data2.origin.com/asset/content/dam/originx/web/app/games/warhammer/warhammer-40000-mechanicus/screens/Mechanicus_Release_06.jpg/6d8d2b6f-9dd8-4f4a-8f7a-45bf528e0c4b/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data3.origin.com/asset/content/dam/originx/web/app/games/warhammer/warhammer-40000-mechanicus/screens/Mechanicus_Release_07.jpg/549ffbfa-0ec1-4440-8433-0c2f45a20409/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data4.origin.com/asset/content/dam/originx/web/app/games/warhammer/warhammer-40000-mechanicus/screens/Mechanicus_Release_08.jpg/9f7ea556-2d85-495b-8328-c661f215ea1f/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data1.origin.com/asset/content/dam/originx/web/app/games/warhammer/warhammer-40000-mechanicus/screens/Mechanicus_Release_09.jpg/a536d5e7-7564-444b-bcb4-cb373f81b467/original.jpg"/>
+</div>
+</div>
+
+<div id="info">
+<h3> Описание </h3>
+<div class="card column">
+  <p>
+  Управляйте одной из самых технологически продвинутых армий Империума — Адептус Механикус. В роли магоса доминуса Фаустиниуса возглавьте экспедицию на недавно заново открытую планету некронов Сильва Тенебрис. Настраивайте отряд, распределяйте ресурсы, ищите давно забытые технологии и управляйте техножрецами.<br><br>
+  Каждое ваше решение в ходе 50 созданных вручную заданий повлияет на следующие задания и в конечном счете решит судьбу всего отряда. Выбирайте свой путь осторожно — судьба Империума зависит от вас.<br><br>
+  <b>КЛЮЧЕВЫЕ ОСОБЕННОСТИ</b><br><br>
+  <b>Аугментация</b><br>
+  Плоть слаба! Улучшайте своих техножрецов с помощью оружия, систем поддержки, сервочерепов и медицинских имплантатов. Выбирайте дисциплины отряда и классы персонажей, настраивая отряд под свой стиль игры.<br><br>
+  <b>Уникальные тактические бои</b><br>
+  Масштабные бои с полным эффектом присутствия проверят вашу стойкость перед лицом ксено-угрозы. Получайте доступ к самым мощным видам оружия и способностям, используя Очки познания, и не ослабляйте давление на врага. Не бойтесь, ибо Омниссия благоволит храбрым.<br><br>
+  <b>Библиотека Погружения</b><br>
+  Захватывающую историю, точно передающую дух культа Адептус Механикус, написал Бен Каунтер (Ben Counter), один из авторов издательства Black Library. У каждого ее персонажа свои характер и мотивация. Почувствуйте витающее в воздухе напряжение и восхититесь красотой потрясающих графических и аудиоэффектов.<br><br>
+  <b>Сложные решения</b><br>
+  Принимайте непростые решения, от которых зависит будущее вашего корабля, ковчега Механикус "Цестус Металликан". Альтернативные концовки сделают каждое прохождение уникальным. Но помните: чем тщательнее вы изучаете каждую гробницу, тем ценнее награды, но тем страшнее и угрозы.<br><br>
+  <b>Литании Омниссии</b><br>
+  Выполняйте достижения в игре и получайте в награду мощные способности, которые можно использовать в бою один раз за задание.<br><br>
+  и многое другое
+  </p>
+</div>
+</div>
+
+<div id="system">
+<h3> Системные требования </h3>
+<div class="card">
+  <table>
+    <tr>
+      <th></th>
+      <th>МИНИМАЛЬНЫЕ СИСТЕМНЫЕ ТРЕБОВАНИЯ</th>
+      <th>РЕКОМЕНДУЕМЫЕ СИСТЕМНЫЕ ТРЕБОВАНИЯ</th>
+    </tr>
+    <tr>
+      <td>OC</td>
+      <td>Windows 7, Windows 8 (8.1), Windows 10 (64 разряда)</td>
+      <td>Windows 7, Windows 8 (8.1), Windows 10 (64 разряда)</td>
+    </tr>
+    <tr>
+      <td>Процессор</td>
+      <td>Intel Core i3 с частотой не менее 3,3 ГГц (если частота ниже 3,3 ГГц, требуется 12 ГБ памяти)</td>
+      <td>четырёхъядерный с частотой 3 ГГц</td>
+    </tr>
+    <tr>
+      <td>ОЗУ</td>
+      <td>8 ГБ</td>
+      <td>8 ГБ</td>
+    </tr>
+    <tr>
+      <td>Видеокарта</td>
+      <td>2GB ATI Radeon HD 7970, 2GB NVIDIA GeForce GTX 770 или лучше</td>
+      <td>GeForce GTX 960 4GB, AMD Radeon R7 200 (8 ГБ видеопамяти)</td>
+    </tr>
+    <tr>
+      <td>Жесткий диск</td>
+      <td>8 ГБ</td>
+      <td>8 ГБ</td>
+    </tr>
+	</table>
+</div>
+</div>
+
+<div id="feedback">
+<h3> Обратная связь </h3>
+<div class="card centered">
+  <form>
+    <h4> Написать нам </h4>
+	<input type="text" placeholder="Ваше имя"/>
+	<input type="email" placeholder="Email"/>
+	<textarea placeholder="Сообщение..." rows="3"></textarea>
+	<input style="cursor: pointer;" type="submit" value="Отправить"/>
+  </form>  
+</div>
+</div>
+
+</div>
+
+<script>
+function close_overlay() {
+  document.getElementById('overlay_image').style.display = "none";
+  
+  window.onscroll = function() {};
+}
+function open_overlay(evt) {
+  document.getElementById('overlay_image').style.display = "block";
+  document.getElementById('overlay_image').innerHTML = '<img src='+evt.currentTarget.src+' width="70%"/>';
+  
+  window.scrollTo(0, 0); 
+  scrollTop = window.pageYOffset || document.documentElement.scrollTop; 
+  scrollLeft = window.pageXOffset || document.documentElement.scrollLeft, 
+  window.onscroll = function() { 
+    window.scrollTo(scrollLeft, scrollTop); 
+  }; 
+}
+</script>
+
+</body>
+</html>

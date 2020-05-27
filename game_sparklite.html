@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+
+body{
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  display: block;
+  background-color: #edf1f2;
+  font-family: Open Sans,sans-serif;
+}
+
+.top_header {
+  background-color:rgb(30, 38, 44);
+  height:450px;
+  min-height:450px;
+  position:relative;
+  width:100%;
+  margin: 0;
+  padding: 0;
+}
+
+.top_header_image {
+  background-image:url('https://data2.origin.com/asset/content/dam/originx/web/app/games/sparklite/sparklite/Sparklite_GDPHeader_2400x600_en_WW.jpg/e886d26c-966b-4aed-9a6d-2b619eb04e9f/original.jpg');
+  background-position-x:35%;
+  background-position-y:0%;
+  background-size:cover;
+  display:block;
+  height:450px;
+  position:absolute;
+  width:100%;
+}
+
+.buttons {
+  background-color: #1e262c;
+  height: 70px;
+  width: 100%;
+}
+
+.button {
+  background-color: inherit;
+  color: #e1e2e4;
+  border: none;
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+  height: 64px; 
+  padding: 0px 20px;
+}
+
+.button:hover {
+  background-color: #2e363d;
+}
+
+.card {
+  border-radius: 8px;
+  background-color: white;
+  margin: 22px;
+  padding: 8px 22px;
+  border: 1px solid #dfe4e5;
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.05);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.05);
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.05);
+}
+
+.column {
+  column-count: 3;
+}
+
+h3 {
+  padding: 0px 22px;
+}
+
+.screens_grid {
+  display: -moz-grid;
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 315px);
+  grid-gap: 15px;  
+  margin: 0px 22px;
+}
+
+.screen {
+  width: 314.65px;
+  height: 176.99px;
+  -moz-background-size: 100%;
+  -webkit-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  empty-cells: hide;
+  font-family: Open Sans,sans-serif;
+}
+
+th {
+  padding: 12px 8px;
+}
+
+td {
+  padding: 10px 6px;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 0 20px;
+  margin-bottom: 10px;
+  background: #E9EFF6;
+  line-height: 40px;
+  border-width: 0;
+  border-radius: 20px;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  padding: 0 20px;
+  margin-bottom: 10px;
+  background: #E9EFF6;
+  line-height: 20px;
+  border-width: 0;
+  border-radius: 20px;
+}
+
+input[type="submit"] {
+  margin-top: 30px;
+  background: #f69a73;
+  border-bottom: 4px solid #d87d56;
+  color: white;
+  font-size: 14px;
+}
+
+#overlay_image {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  position: absolute;
+  display: none;
+  z-index: 100;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+#overlay_image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+</style>
+<body>
+
+<div id="overlay_image" onclick="close_overlay()"></div>
+
+<section class="top_header">
+  <div class="top_header_image"></div>
+</section>
+
+<div class="buttons">
+	<a href="#screens"><button class="button">Скриншоты и видеоролики</button></a>
+	<a href="#info"><button class="button">Описание</button></a>
+	<a href="#system"><button class="button">Системные требования</button></a>
+	<a href="#feedback"><button class="button">Обратная связь</button></a>
+	<a href="https://www.origin.com/rus/ru-ru/store/sparklite/sparklite" target="_blank"><button class="button">Получить игру</button></a>
+</div>
+
+<div>
+
+<div id="screens">
+<h3> Скриншоты и видеоролики </h3>
+<div class="screens_grid">
+  <img onclick="open_overlay(event)" class="screen" src="https://data3.origin.com/asset/content/dam/originx/web/app/games/sparklite/sparklite/Screenshots/1.jpg/bc4efd53-c6fc-4d3f-8380-84002c13abc9/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data4.origin.com/asset/content/dam/originx/web/app/games/sparklite/sparklite/Screenshots/2.jpg/360bfa30-93c9-48e4-b6db-c8b90744d357/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data1.origin.com/asset/content/dam/originx/web/app/games/sparklite/sparklite/Screenshots/3.jpg/e2b86fab-dd07-4d20-a73e-8060e4a42f82/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data2.origin.com/asset/content/dam/originx/web/app/games/sparklite/sparklite/Screenshots/4.jpg/a95aaf51-2225-489b-a1ce-54f7dd85817e/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data3.origin.com/asset/content/dam/originx/web/app/games/sparklite/sparklite/Screenshots/5.jpg/b8b4b8ad-e620-40fa-b50e-f9bb3935d140/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data4.origin.com/asset/content/dam/originx/web/app/games/sparklite/sparklite/Screenshots/6.jpg/b01d53d3-500e-466a-b923-69100d2b5a19/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data1.origin.com/asset/content/dam/originx/web/app/games/sparklite/sparklite/Screenshots/7.jpg/5846e292-95f4-4969-bf10-895a9f8db5ae/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data2.origin.com/asset/content/dam/originx/web/app/games/sparklite/sparklite/Screenshots/8.jpg/7ca4223f-54e8-416c-a8d5-1d1aa38a62b8/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data4.origin.com/asset/content/dam/originx/web/app/games/sparklite/sparklite/Screenshots/10.jpg/074f038b-171e-4c99-a5de-36380f98cc95/original.jpg"/>
+</div>
+</div>
+
+<div id="info">
+<h3> Описание </h3>
+<div class="card column">
+  <p>
+  Sparklite — приключенческая игра, действие которой разворачивается в необычной и постоянно меняющейся Геодии. Сражайтесь с врагами с помощью арсенала гаджетов, оружия и снаряжения, смотря на всё сверху. Исследуйте опасные уголки процедурно генерируемого мира, уничтожайте огромные шахты и обуздайте силу спарклита!<br><br>
+  В Геодии всё держится на спарклите — он обеспечивает жизнь на планете, и местные жители научились безопасно его использовать. Сияющий голубой минерал может служить возобновляемым источником энергии. Но храбрецы и скряги хотят полностью завладеть его мощной силой, что приведёт к серьёзным последствиям. Самопровозглашённый Барон Геодии задумал добраться до самого ядра спарклита. Он добывает его в больших количествах и использует для укрепления своих боевых машин, но загрязнение от использования спарклита плохо сказывается на мире. Животные превратились в свирепых монстров, а окружающая среда погибает.<br><br>
+  Но в ядре спарклита находится естественный защитный механизм, который помогает оберегать Геодию. Время от времени ядро создаёт помехи, из-за которых мир перестраивается, а все старания Барона летят коту под хвост. Нашей героине по имени Ада необходимо остановить Барона до того, как он доберётся до ядра и создаст новый мир, где все подчиняются ему. Ада — отважный и талантливый механик, которому предстоит сразить приспешников Барона в пяти разных зонах. Если она хочет сразить Барона и положить конец его смертельно опасному плану, Аде придётся сплотиться с потрясающими и странноватыми жителями этого места.<br><br>
+  Аде необходимо посетить все зоны мира и уничтожить шахты Барона... Пока ещё есть время...<br><br>
+  <b>Ключевые особенности</b><br>
+  <ul>
+  <li><i>Завораживающая красота.</i> Филигранная пиксельная графика, созданная под вдохновением от классических игр.</li>
+  <li><i>Оригинальный саундтрек.</i> Мелодии в стиле музыки с приставки GameCube от композитора Дейла Норта (Wizard of Legend).</li>
+  <li><i>Большой мир игры Sparklite.</i> Пять красивых и процедурно генерируемых природных зон.</li>
+  <li><i>Персональный арсенал.</i> Создавайте гаджеты для решения головоломок и сражения врагов.</li>
+  <li><i>Сложные боссы.</i> Уничтожьте горнодобывающую корпорацию Барона и его огромных титанов.</li>
+  <li><i>Местные жители.</i> Подружитесь с людьми Геодии и помогите им построить убежище.</li>
+  <li><i>Коллекционные предметы.</i> Ищите коллекционные предметы по всему миру.</li>
+  <li><i>Преданная команда.</i> Спасите робота Ады, чтобы сыграть в локальный кооперативный режим с другом.</li>
+  </ul>
+  </p>
+</div>
+</div>
+
+<div id="system">
+<h3> Системные требования </h3>
+<div class="card">
+  <table>
+    <tr>
+      <td>OC</td>
+      <td>Windows 7 или новее</td>
+    </tr>
+    <tr>
+      <td>ОЗУ</td>
+      <td>4 ГБ</td>
+    </tr>
+    <tr>
+      <td>Видеокарта</td>
+      <td>выделенная видеокарта с 1 ГБ видеопамяти</td>
+    </tr>
+    <tr>
+      <td>Жесткий диск</td>
+      <td>3 ГБ</td>
+    </tr>
+	</table>
+</div>
+</div>
+
+<div id="feedback">
+<h3> Обратная связь </h3>
+<div class="card centered">
+  <form>
+    <h4> Написать нам </h4>
+	<input type="text" placeholder="Ваше имя"/>
+	<input type="email" placeholder="Email"/>
+	<textarea placeholder="Сообщение..." rows="3"></textarea>
+	<input style="cursor: pointer;" type="submit" value="Отправить"/>
+  </form>  
+</div>
+</div>
+
+</div>
+
+<script>
+function close_overlay() {
+  document.getElementById('overlay_image').style.display = "none";
+  
+  window.onscroll = function() {};
+}
+function open_overlay(evt) {
+  document.getElementById('overlay_image').style.display = "block";
+  document.getElementById('overlay_image').innerHTML = '<img src='+evt.currentTarget.src+' width="70%"/>';
+  
+  window.scrollTo(0, 0); 
+  scrollTop = window.pageYOffset || document.documentElement.scrollTop; 
+  scrollLeft = window.pageXOffset || document.documentElement.scrollLeft, 
+  window.onscroll = function() { 
+    window.scrollTo(scrollLeft, scrollTop); 
+  }; 
+}
+</script>
+
+</body>
+</html>

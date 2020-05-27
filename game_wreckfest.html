@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+
+body{
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  display: block;
+  background-color: #edf1f2;
+  font-family: Open Sans,sans-serif;
+}
+
+.top_header {
+  background-color:rgb(30, 38, 44);
+  height:450px;
+  min-height:450px;
+  position:relative;
+  width:100%;
+  margin: 0;
+  padding: 0;
+}
+
+.top_header_image {
+  background-image:url('https://data4.origin.com/asset/content/dam/originx/web/app/games/wreckfest/wreckfest/gdp/wreckfest_gdp-bg_2400%C3%97600.jpg/85147464-4dcc-46f0-82e7-d75135bb109f/original.jpg');
+  background-position-x:35%;
+  background-position-y:0%;
+  background-size:cover;
+  display:block;
+  height:450px;
+  position:absolute;
+  width:100%;
+}
+
+.buttons {
+  background-color: #1e262c;
+  height: 70px;
+  width: 100%;
+}
+
+.button {
+  background-color: inherit;
+  color: #e1e2e4;
+  border: none;
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+  height: 64px; 
+  padding: 0px 20px;
+}
+
+.button:hover {
+  background-color: #2e363d;
+}
+
+.card {
+  border-radius: 8px;
+  background-color: white;
+  margin: 22px;
+  padding: 8px 22px;
+  border: 1px solid #dfe4e5;
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.05);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.05);
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.05);
+}
+
+.column {
+  column-count: 3;
+}
+
+h3 {
+  padding: 0px 22px;
+}
+
+.screens_grid {
+  display: -moz-grid;
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 315px);
+  grid-gap: 15px;  
+  margin: 0px 22px;
+}
+
+.screen {
+  width: 314.65px;
+  height: 176.99px;
+  -moz-background-size: 100%;
+  -webkit-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  empty-cells: hide;
+  font-family: Open Sans,sans-serif;
+}
+
+th {
+  padding: 12px 8px;
+}
+
+td {
+  padding: 10px 6px;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 0 20px;
+  margin-bottom: 10px;
+  background: #E9EFF6;
+  line-height: 40px;
+  border-width: 0;
+  border-radius: 20px;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  padding: 0 20px;
+  margin-bottom: 10px;
+  background: #E9EFF6;
+  line-height: 20px;
+  border-width: 0;
+  border-radius: 20px;
+}
+
+input[type="submit"] {
+  margin-top: 30px;
+  background: #f69a73;
+  border-bottom: 4px solid #d87d56;
+  color: white;
+  font-size: 14px;
+}
+
+#overlay_image {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  position: absolute;
+  display: none;
+  z-index: 100;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+#overlay_image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+</style>
+<body>
+
+<div id="overlay_image" onclick="close_overlay()"></div>
+
+<section class="top_header">
+  <div class="top_header_image"></div>
+</section>
+
+<div class="buttons">
+	<a href="#screens"><button class="button">Скриншоты и видеоролики</button></a>
+	<a href="#info"><button class="button">Описание</button></a>
+	<a href="#system"><button class="button">Системные требования</button></a>
+	<a href="#feedback"><button class="button">Обратная связь</button></a>
+	<a href="https://www.origin.com/rus/ru-ru/store/wreckfest/wreckfest" target="_blank"><button class="button">Получить игру</button></a>
+</div>
+
+<div>
+
+<div id="screens">
+<h3> Скриншоты и видеоролики </h3>
+<div class="screens_grid">
+  <img onclick="open_overlay(event)" class="screen" src="https://data2.origin.com/asset/content/dam/originx/web/app/games/wreckfest/wreckfest/screens/wreckfest_screenhi_1920x1080_en_US_01.jpg/cbf35d93-cc82-429e-82ae-7f8d901f5b03/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data3.origin.com/asset/content/dam/originx/web/app/games/wreckfest/wreckfest/screens/wreckfest_screenhi_1920x1080_en_US_02.jpg/9f683220-16f3-487d-987e-956655d7fa6d/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data4.origin.com/asset/content/dam/originx/web/app/games/wreckfest/wreckfest/screens/wreckfest_screenhi_1920x1080_en_US_03.jpg/3c47e7e3-c009-4f62-bfbf-fe701f8ff3c5/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data1.origin.com/asset/content/dam/originx/web/app/games/wreckfest/wreckfest/screens/wreckfest_screenhi_1920x1080_en_US_04.jpg/06cc6d29-94d2-44b1-aada-e43e849bcca3/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data2.origin.com/asset/content/dam/originx/web/app/games/wreckfest/wreckfest/screens/wreckfest_screenhi_1920x1080_en_US_05.jpg/44859c78-01d9-4519-8560-e7b2d1ac711d/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data3.origin.com/asset/content/dam/originx/web/app/games/wreckfest/wreckfest/screens/wreckfest_screenhi_1920x1080_en_US_06.jpg/620ab02a-e7c9-4664-85a9-2465ef65f0fd/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data4.origin.com/asset/content/dam/originx/web/app/games/wreckfest/wreckfest/screens/wreckfest_screenhi_1920x1080_en_US_07.jpg/dc9bb67a-ec4d-4164-b0b5-13c5cdf4a1ca/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data1.origin.com/asset/content/dam/originx/web/app/games/wreckfest/wreckfest/screens/wreckfest_screenhi_1920x1080_en_US_08.jpg/ed913874-2b9e-45fc-8991-4a4e24bb4e6e/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data2.origin.com/asset/content/dam/originx/web/app/games/wreckfest/wreckfest/screens/wreckfest_screenhi_1920x1080_en_US_09.jpg/429f5ce5-d1c6-43f1-8d14-e5a94003651a/original.jpg"/>
+</div>
+</div>
+
+<div id="info">
+<h3> Описание </h3>
+<div class="card column">
+  <p>
+  Нарушайте правила и гоняйте как никогда в жизни в Wreckfest!<br><br>
+  Эпические столкновения, нешуточная борьба до самого финиша и миллион способов гнуть и корёжить металл — вот что ждёт вас в Wreckfest, новой гоночной игре со сверхреалистичной симуляцией физики от легендарного разработчика Bugbear, подарившего миру FlatOut 1 и 2!<br><br>
+  Жгите резину и рвите металл — игра начинается!<br><br>
+  Wreckfest предлагает множество вариантов улучшений и персонализации. Может быть, вы готовитесь к гонке на выживание? Тогда лучше установить усиленный бампер, каркас безопасности и боковую защиту. Решили поучаствовать в гонке на «вёдрах»? Тогда улучшайте мотор: ставьте новые фильтры, распределительный вал и топливную систему. Такие классные боевые гонки вы найдёте только в игре Wreckfest.<br><br>
+  <b>КЛЮЧЕВЫЕ ОСОБЕННОСТИ</b>
+  <br><br>
+  <b>Уникальный игровой процесс</b><br>
+  Захватывающие гонки без правил с напряжёнными моментами, возможными только благодаря сверхреалистичной физической модели. Участвуйте в головокружительных заездах, сейте хаос на безумных трассах с пересечениями и встречным движением или выезжайте на арену для дерби и становитесь королём разрушения.<br><br>
+  <b>Крутые тачки</b><br>
+  Наши машины старые и побитые, но очень уж стильные и уверенные в себе! От американских тяжеловесов до ловких европейцев и бодрых азиатов! Подобного вы больше нигде не найдёте.<br><br>
+  <b>Продуманные настройки</b><br>
+  Меняйте не только внешний вид машины, но и её защитные свойства — навешивая на машину дополнительное железо, вы повышаете её прочность. Но это также увеличивает её вес, что влияет на управление. Настраивайте машину и превратите её в непробиваемый танк или в хрупкую, но скоростную ракету — да во что угодно!<br><br>
+  <b>Сетевая игра</b><br>
+  Уничтожайте своих друзей и станьте королём разрушений!<br><br>
+  <b>Режим испытаний</b><br>
+  Развлекайтесь на газонокосилках, тракторах, школьных автобусах, мотоциклах с колясками и не только!<br><br>
+  <b>Режим карьеры</b><br>
+  Участвуйте в чемпионатах, зарабатывайте опыт, открывайте улучшения и станьте величайшим гонщиком в Wreckfest!<br><br>
+  </p>
+</div>
+</div>
+
+<div id="system">
+<h3> Системные требования </h3>
+<div class="card">
+  <table>
+    <tr>
+      <th></th>
+      <th>МИНИМАЛЬНЫЕ СИСТЕМНЫЕ ТРЕБОВАНИЯ</th>
+      <th>РЕКОМЕНДУЕМЫЕ СИСТЕМНЫЕ ТРЕБОВАНИЯ</th>
+    </tr>
+    <tr>
+      <td>OC</td>
+      <td>Windows Vista</td>
+      <td>Windows 7 (32 или 64 разряда), Windows 8, Windows 10</td>
+    </tr>
+    <tr>
+      <td>Процессор</td>
+      <td>Intel® Core™2 Duo с частотой 2,7 ГГц или аналогичный процессор AMD</td>
+      <td>Intel® Core™ i5 с частотой 3 ГГц или аналогичный процессор AMD</td>
+    </tr>
+    <tr>
+      <td>ОЗУ</td>
+      <td>4 ГБ</td>
+      <td>8 ГБ</td>
+    </tr>
+    <tr>
+      <td>Видеокарта</td>
+      <td>NVIDIA Geforce® GTX™ 460 или AMD Radeon™ HD 6850</td>
+      <td>NVIDIA GeForce® GTX™ 970 или AMD Radeon™ R9 380X</td>
+    </tr>
+    <tr>
+      <td>DirectX</td>
+      <td>версия 11</td>
+      <td>версия 11</td>
+    </tr>
+    <tr>
+      <td>Жесткий диск</td>
+      <td>15 ГБ</td>
+      <td>15 ГБ</td>
+    </tr>
+	</table>
+</div>
+</div>
+
+<div id="feedback">
+<h3> Обратная связь </h3>
+<div class="card centered">
+  <form>
+    <h4> Написать нам </h4>
+	<input type="text" placeholder="Ваше имя"/>
+	<input type="email" placeholder="Email"/>
+	<textarea placeholder="Сообщение..." rows="3"></textarea>
+	<input style="cursor: pointer;" type="submit" value="Отправить"/>
+  </form>  
+</div>
+</div>
+
+</div>
+
+<script>
+function close_overlay() {
+  document.getElementById('overlay_image').style.display = "none";
+  
+  window.onscroll = function() {};
+}
+function open_overlay(evt) {
+  document.getElementById('overlay_image').style.display = "block";
+  document.getElementById('overlay_image').innerHTML = '<img src='+evt.currentTarget.src+' width="70%"/>';
+  
+  window.scrollTo(0, 0); 
+  scrollTop = window.pageYOffset || document.documentElement.scrollTop; 
+  scrollLeft = window.pageXOffset || document.documentElement.scrollLeft, 
+  window.onscroll = function() { 
+    window.scrollTo(scrollLeft, scrollTop); 
+  }; 
+}
+</script>
+
+</body>
+</html>

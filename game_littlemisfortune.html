@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+
+body{
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  display: block;
+  background-color: #edf1f2;
+  font-family: Open Sans,sans-serif;
+}
+
+.top_header {
+  background-color:rgb(30, 38, 44);
+  height:450px;
+  min-height:450px;
+  position:relative;
+  width:100%;
+  margin: 0;
+  padding: 0;
+}
+
+.top_header_image {
+  background-image:url('https://data3.origin.com/asset/content/dam/originx/web/app/games/little-misfortune/little-misfortune/little-misfortune_gdp-bg_en_WW.jpg/abd3e7d2-8bb3-485f-a477-a25d0c505421/original.jpg');
+  background-position-x:35%;
+  background-position-y:0%;
+  background-size:cover;
+  display:block;
+  height:450px;
+  position:absolute;
+  width:100%;
+}
+
+.buttons {
+  background-color: #1e262c;
+  height: 70px;
+  width: 100%;
+}
+
+.button {
+  background-color: inherit;
+  color: #e1e2e4;
+  border: none;
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+  height: 64px; 
+  padding: 0px 20px;
+}
+
+.button:hover {
+  background-color: #2e363d;
+}
+
+.card {
+  border-radius: 8px;
+  background-color: white;
+  margin: 22px;
+  padding: 8px 22px;
+  border: 1px solid #dfe4e5;
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.05);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.05);
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.05);
+}
+
+.column {
+  column-count: 3;
+}
+
+h3 {
+  padding: 0px 22px;
+}
+
+.screens_grid {
+  display: -moz-grid;
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 315px);
+  grid-gap: 15px;  
+  margin: 0px 22px;
+}
+
+.screen {
+  width: 314.65px;
+  height: 176.99px;
+  -moz-background-size: 100%;
+  -webkit-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  empty-cells: hide;
+  font-family: Open Sans,sans-serif;
+}
+
+th {
+  padding: 12px 8px;
+}
+
+td {
+  padding: 10px 6px;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 0 20px;
+  margin-bottom: 10px;
+  background: #E9EFF6;
+  line-height: 40px;
+  border-width: 0;
+  border-radius: 20px;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  padding: 0 20px;
+  margin-bottom: 10px;
+  background: #E9EFF6;
+  line-height: 20px;
+  border-width: 0;
+  border-radius: 20px;
+}
+
+input[type="submit"] {
+  margin-top: 30px;
+  background: #f69a73;
+  border-bottom: 4px solid #d87d56;
+  color: white;
+  font-size: 14px;
+}
+
+#overlay_image {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  position: absolute;
+  display: none;
+  z-index: 100;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+#overlay_image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+</style>
+<body>
+
+<div id="overlay_image" onclick="close_overlay()"></div>
+
+<section class="top_header">
+  <div class="top_header_image"></div>
+</section>
+
+<div class="buttons">
+	<a href="#screens"><button class="button">Скриншоты и видеоролики</button></a>
+	<a href="#info"><button class="button">Описание</button></a>
+	<a href="#system"><button class="button">Системные требования</button></a>
+	<a href="#feedback"><button class="button">Обратная связь</button></a>
+	<a href="https://www.origin.com/rus/ru-ru/store/little-misfortune/little-misfortune" target="_blank"><button class="button">Получить игру</button></a>
+</div>
+
+<div>
+
+<div id="screens">
+<h3> Скриншоты и видеоролики </h3>
+<div class="screens_grid">
+  <img onclick="open_overlay(event)" class="screen" src="https://data1.origin.com/asset/content/dam/originx/web/app/games/little-misfortune/little-misfortune/Screenshots/screenshot_01.jpg/baa9cfd2-d451-49eb-bcfb-e8c54eb5d14d/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data2.origin.com/asset/content/dam/originx/web/app/games/little-misfortune/little-misfortune/Screenshots/screenshot_02.jpg/b606501e-9854-4537-baa1-9c2f2edd79b6/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data3.origin.com/asset/content/dam/originx/web/app/games/little-misfortune/little-misfortune/Screenshots/screenshot_03.jpg/374f3657-ea5b-40f6-9907-d133f5e4acab/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data4.origin.com/asset/content/dam/originx/web/app/games/little-misfortune/little-misfortune/Screenshots/screenshot_04.jpg/f9a8739a-a7b5-4b30-86e1-45e8199bf8ed/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data1.origin.com/asset/content/dam/originx/web/app/games/little-misfortune/little-misfortune/Screenshots/screenshot_05.jpg/80b73347-58e1-4c6b-9984-498de6191028/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data2.origin.com/asset/content/dam/originx/web/app/games/little-misfortune/little-misfortune/Screenshots/screenshot_06.jpg/b6e24336-488a-4de7-a5fa-507678b91b3b/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data3.origin.com/asset/content/dam/originx/web/app/games/little-misfortune/little-misfortune/Screenshots/screenshot_07.jpg/7b7fccc7-7ca5-425f-a00d-7c262503b7c7/original.jpg"/>
+</div>
+</div>
+
+<div id="info">
+<h3> Описание </h3>
+<div class="card column">
+  <p>
+  Little Misfortune — это интерактивная история, основное внимание в которой уделено исследованиям и персонажам, одновременно мрачным и милым. Это история, в которой ваш выбор имеет последствия.<br><br>
+
+В главной роли Неудача Рамирес Эрнандес, восьмилетний ребёнок с богатым воображением, который ищет вечное счастье, чтобы подарить его маме. Во главе со своим новым другом по имени Мистер Голос они отправляются в лес, где раскрываются тайны и случаются неприятности.<br><br>
+
+Игра создана талантливым дуэтом разработчиков Killmonday Games и происходит в одной вселенной с культовой Fran Bow.<br><br>
+
+<b>Ключевые особенности:</b><br>
+  <ul>
+  <li>вы сможете погладить собачку, рыбку, волка, Кракена, котенка и лиса;</li>
+  <li>посетите кладбище домашних животных с лопатой;</li>
+  <li>теперь с настоящими человеческими голосами: услышьте, как Неудача скажет что-нибудь милое!</li>
+  <li>пропавшие без вести дети;</li>
+  <li>вас ждёт монстр!</li>
+  <li>влюбляйтесь;</li>
+  <li>совершайте мелкие преступления;</li>
+  <li>оригинальная графика от Натальи Мартинссон;</li>
+  <li>оригинальный саундтрек от Исака Мартинссона.</li>
+  </ul>
+  </p>
+</div>
+</div>
+
+<div id="system">
+<h3> Системные требования </h3>
+<div class="card">
+  <table>
+    <tr>
+      <th></th>
+      <th>МИНИМАЛЬНЫЕ СИСТЕМНЫЕ ТРЕБОВАНИЯ</th>
+      <th>РЕКОМЕНДУЕМЫЕ СИСТЕМНЫЕ ТРЕБОВАНИЯ</th>
+    </tr>
+    <tr>
+      <td>OC</td>
+      <td>Windows 7</td>
+      <td>Windows 10</td>
+    </tr>
+    <tr>
+      <td>Процессор</td>
+      <td>Intel(R) Core(TM) i5-6300U CPU с частотой 2,5 ГГц</td>
+      <td>Intel(R) Core(TM) i7-6700 CPU с частотой 3,4 ГГц</td>
+    </tr>
+    <tr>
+      <td>ОЗУ</td>
+      <td>8 ГБ</td>
+      <td>16 ГБ</td>
+    </tr>
+    <tr>
+      <td>Видеокарта</td>
+      <td>Intel(R) HD Graphics 520</td>
+      <td>NVIDIA GeForce GTX 1080</td>
+    </tr>
+    <tr>
+      <td>Жесткий диск</td>
+      <td>7 ГБ</td>
+      <td>7 ГБ</td>
+    </tr>
+	</table>
+</div>
+</div>
+
+<div id="feedback">
+<h3> Обратная связь </h3>
+<div class="card centered">
+  <form>
+    <h4> Написать нам </h4>
+	<input type="text" placeholder="Ваше имя"/>
+	<input type="email" placeholder="Email"/>
+	<textarea placeholder="Сообщение..." rows="3"></textarea>
+	<input style="cursor: pointer;" type="submit" value="Отправить"/>
+  </form>  
+</div>
+</div>
+
+</div>
+
+<script>
+function close_overlay() {
+  document.getElementById('overlay_image').style.display = "none";
+  
+  window.onscroll = function() {};
+}
+function open_overlay(evt) {
+  document.getElementById('overlay_image').style.display = "block";
+  document.getElementById('overlay_image').innerHTML = '<img src='+evt.currentTarget.src+' width="70%"/>';
+  
+  window.scrollTo(0, 0); 
+  scrollTop = window.pageYOffset || document.documentElement.scrollTop; 
+  scrollLeft = window.pageXOffset || document.documentElement.scrollLeft, 
+  window.onscroll = function() { 
+    window.scrollTo(scrollLeft, scrollTop); 
+  }; 
+}
+</script>
+
+</body>
+</html>

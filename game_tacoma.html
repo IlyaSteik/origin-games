@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+
+body{
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  display: block;
+  background-color: #edf1f2;
+  font-family: Open Sans,sans-serif;
+}
+
+.top_header {
+  background-color:rgb(30, 38, 44);
+  height:450px;
+  min-height:450px;
+  position:relative;
+  width:100%;
+  margin: 0;
+  padding: 0;
+}
+
+.top_header_image {
+  background-image:url('https://data3.origin.com/asset/content/dam/originx/web/app/games/tacoma/tacoma/Tacoma_gdp-bg_en_WW.jpg/e1299d56-cf04-4434-9dbb-6cf4a64b6d95/original.jpg');
+  background-position-x:35%;
+  background-position-y:0%;
+  background-size:cover;
+  display:block;
+  height:450px;
+  position:absolute;
+  width:100%;
+}
+
+.buttons {
+  background-color: #1e262c;
+  height: 70px;
+  width: 100%;
+}
+
+.button {
+  background-color: inherit;
+  color: #e1e2e4;
+  border: none;
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+  height: 64px; 
+  padding: 0px 20px;
+}
+
+.button:hover {
+  background-color: #2e363d;
+}
+
+.card {
+  border-radius: 8px;
+  background-color: white;
+  margin: 22px;
+  padding: 8px 22px;
+  border: 1px solid #dfe4e5;
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.05);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.05);
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.05);
+}
+
+.column {
+  column-count: 3;
+}
+
+h3 {
+  padding: 0px 22px;
+}
+
+.screens_grid {
+  display: -moz-grid;
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 315px);
+  grid-gap: 15px;  
+  margin: 0px 22px;
+}
+
+.screen {
+  width: 314.65px;
+  height: 176.99px;
+  -moz-background-size: 100%;
+  -webkit-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  empty-cells: hide;
+  font-family: Open Sans,sans-serif;
+}
+
+th {
+  padding: 12px 8px;
+}
+
+td {
+  padding: 10px 6px;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 0 20px;
+  margin-bottom: 10px;
+  background: #E9EFF6;
+  line-height: 40px;
+  border-width: 0;
+  border-radius: 20px;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  padding: 0 20px;
+  margin-bottom: 10px;
+  background: #E9EFF6;
+  line-height: 20px;
+  border-width: 0;
+  border-radius: 20px;
+}
+
+input[type="submit"] {
+  margin-top: 30px;
+  background: #f69a73;
+  border-bottom: 4px solid #d87d56;
+  color: white;
+  font-size: 14px;
+}
+
+#overlay_image {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  position: absolute;
+  display: none;
+  z-index: 100;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+#overlay_image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+</style>
+<body>
+
+<div id="overlay_image" onclick="close_overlay()"></div>
+
+<section class="top_header">
+  <div class="top_header_image"></div>
+</section>
+
+<div class="buttons">
+	<a href="#screens"><button class="button">Скриншоты и видеоролики</button></a>
+	<a href="#info"><button class="button">Описание</button></a>
+	<a href="#system"><button class="button">Системные требования</button></a>
+	<a href="#feedback"><button class="button">Обратная связь</button></a>
+	<a href="https://www.origin.com/rus/ru-ru/store/tacoma/tacoma" target="_blank"><button class="button">Получить игру</button></a>
+</div>
+
+<div>
+
+<div id="screens">
+<h3> Скриншоты и видеоролики </h3>
+<div class="screens_grid">
+  <img onclick="open_overlay(event)" class="screen" src="https://data1.origin.com/asset/content/dam/originx/web/app/games/tacoma/tacoma/screenshots/tacoma_1084474_screenshot01.jpg/c4307b34-c652-4123-b456-3d7201890bb1/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data2.origin.com/asset/content/dam/originx/web/app/games/tacoma/tacoma/screenshots/tacoma_1084474_screenshot02.jpg/91461a44-d29a-4f2f-844a-06a45f711f9d/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data3.origin.com/asset/content/dam/originx/web/app/games/tacoma/tacoma/screenshots/tacoma_1084474_screenshot03.jpg/f3a6159d-ae22-413f-910d-f35a86009038/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data4.origin.com/asset/content/dam/originx/web/app/games/tacoma/tacoma/screenshots/tacoma_1084474_screenshot04.jpg/b73f63f0-09e3-4ed6-8c77-29b5c98c1ba4/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data1.origin.com/asset/content/dam/originx/web/app/games/tacoma/tacoma/screenshots/tacoma_1084474_screenshot05.jpg/07a064fe-bca8-4e6e-892c-11ed29c040c8/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data2.origin.com/asset/content/dam/originx/web/app/games/tacoma/tacoma/screenshots/tacoma_1084474_screenshot06.jpg/6c2720d8-7b8d-4105-9054-64becd5c3631/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data3.origin.com/asset/content/dam/originx/web/app/games/tacoma/tacoma/screenshots/tacoma_1084474_screenshot07.jpg/3cbaea05-2f79-4546-b2ba-4e28b7f8ae90/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data4.origin.com/asset/content/dam/originx/web/app/games/tacoma/tacoma/screenshots/tacoma_1084474_screenshot08.jpg/7207cbce-5fd1-4e21-bf2f-96767ec698c7/original.jpg"/>
+</div>
+</div>
+
+<div id="info">
+<h3> Описание </h3>
+<div class="card column">
+  <p>
+  <b>Tacoma</b> — приключенческая игра с увлекательным сюжетом, действия которой разворачиваются в 2088 году на высокотехнологичной космической станции. Отправляйтесь на задание и выясните, как жили и работали члены экипажа. Вам откроется удивительная история о вере, страхе и непоколебимости перед лицом опасности.<br><br>
+  На станции «Такома» установлена цифровая система видеонаблюдения, которая запечатлела важные моменты из жизни членов экипажа. Всё записано в виде трёхмерных голограмм, поэтому вы практически оказываетесь в центре событий. Возможность перемотки записей позволит вам рассмотреть историю с разных ракурсов и раскрыть всю многослойность повествования.<br><br>
+  Tacoma — новое творение создателей игры <b>Gone Home</b>, для которых продуманная до мельчайших подробностей история стала своего рода традицией. Но в этот раз сюжет получился ещё более захватывающим.<br><br>
+  <b>Ключевые особенности</b><br><br>
+  <b>Захватывающий сюжет</b><br>
+  Ещё недавно на космической станции «Такома» жили и работали шесть членов экипажа. Они строили отношения, любили, переживали утраты и вместе справлялись с различными трудностями. Вы будете не только расследовать, что произошло на станции, но и узнаете, какими людьми были участники экипажа. В этом вам помогут интерактивные эпизоды из жизни прежних обитателей «Такомы», воссозданные в дополненной реальности.<br><br>
+  <b>Новый принцип повествования</b><br>
+  В любой части космической станции вас будут окружать голограммы членов экипажа, истории которых тесно переплетены между собой. Перематывайте записи, чтобы восстановить последовательность событий, взглянуть на произошедшее с разных сторон и рассмотреть каждую мелочь.<br><br>
+  <b>Интерактивный игровой мир</b><br>
+  Исследуйте станцию «Такома» привычными методами и с помощью цифровых технологий. Открывайте двери и ящики в поисках важных предметов и записок. Узнавайте, о чём говорили члены команды и какие мысли их посещали. В расследовании имеют значение даже мельчайшие подробности.<br><br>
+  <b>Видение будущего</b><br>
+  Перенеситесь в 2088 год. Погрузитесь в фантастический мир, где человечество активно осваивает космос за пределами орбиты Земли. Создатели игры уже удостоились многочисленных наград за проекты Gone Home и BioShock 2: Minerva’s Den. Теперь они хотят поделиться с вами своими фантазиями на тему будущего.<br><br>
+  <b>Лаконичное повествование</b><br>
+  Прохождение игры Tacoma занимает от двух до пяти часов. Сколько вы сможете узнать о произошедшем на станции, зависит исключительно от вас. В Tacoma нет боевой системы, а игровой процесс не построен на разгадывании загадок. Вы погружаетесь в сюжет и исследуете игровой мир в удобном для вас темпе.<br><br>
+  <b>Режим с комментариями разработчиков!</b><br>
+  Теперь Tacoma включает более двух часов аудио-комментариев сценаристов, дизайнеров, программистов, художников и других членов команды, работавших над созданием игры. Узнайте тайны вымышленного мира Tacoma, как проходила разработка игры и истории из жизни разработчиков.
+  </p>
+</div>
+</div>
+
+<div id="system">
+<h3> Системные требования </h3>
+<div class="card">
+  <table>
+    <tr>
+      <th></th>
+      <th>МИНИМАЛЬНЫЕ СИСТЕМНЫЕ ТРЕБОВАНИЯ</th>
+      <th>РЕКОМЕНДУЕМЫЕ СИСТЕМНЫЕ ТРЕБОВАНИЯ</th>
+    </tr>
+    <tr>
+      <td>OC</td>
+      <td>Windows 7 или новее (64 разряда)</td>
+      <td>Windows 7 или новее (64 разряда)</td>
+    </tr>
+    <tr>
+      <td>Процессор</td>
+      <td>Intel i5 или лучше с частотой 1,9 ГГц</td>
+      <td>Intel i7 или лучше с частотой 2,9 ГГц</td>
+    </tr>
+    <tr>
+      <td>ОЗУ</td>
+      <td>4 ГБ</td>
+      <td>8 ГБ</td>
+    </tr>
+    <tr>
+      <td>Видеокарта</td>
+      <td>встроенный или выделенный графический ускоритель; не менее 1 ГБ видеопамяти</td>
+      <td>выделенный графический ускоритель; не менее 2 ГБ видеопамяти</td>
+    </tr>
+    <tr>
+      <td>DirectX</td>
+      <td>версия 11</td>
+      <td>версия 11</td>
+    </tr>
+    <tr>
+      <td>Жесткий диск</td>
+      <td>11 ГБ</td>
+      <td>11 ГБ</td>
+    </tr>
+	</table>
+</div>
+</div>
+
+<div id="feedback">
+<h3> Обратная связь </h3>
+<div class="card centered">
+  <form>
+    <h4> Написать нам </h4>
+	<input type="text" placeholder="Ваше имя"/>
+	<input type="email" placeholder="Email"/>
+	<textarea placeholder="Сообщение..." rows="3"></textarea>
+	<input style="cursor: pointer;" type="submit" value="Отправить"/>
+  </form>  
+</div>
+</div>
+
+</div>
+
+<script>
+function close_overlay() {
+  document.getElementById('overlay_image').style.display = "none";
+  
+  window.onscroll = function() {};
+}
+function open_overlay(evt) {
+  document.getElementById('overlay_image').style.display = "block";
+  document.getElementById('overlay_image').innerHTML = '<img src='+evt.currentTarget.src+' width="70%"/>';
+  
+  window.scrollTo(0, 0); 
+  scrollTop = window.pageYOffset || document.documentElement.scrollTop; 
+  scrollLeft = window.pageXOffset || document.documentElement.scrollLeft, 
+  window.onscroll = function() { 
+    window.scrollTo(scrollLeft, scrollTop); 
+  }; 
+}
+</script>
+
+</body>
+</html>

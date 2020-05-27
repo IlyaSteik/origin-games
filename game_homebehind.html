@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+
+body{
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  display: block;
+  background-color: #edf1f2;
+  font-family: Open Sans,sans-serif;
+}
+
+.top_header {
+  background-color:rgb(30, 38, 44);
+  height:450px;
+  min-height:450px;
+  position:relative;
+  width:100%;
+  margin: 0;
+  padding: 0;
+}
+
+.top_header_image {
+  background-image:url('https://data4.origin.com/asset/content/dam/originx/web/app/games/home-behind/home-behind/homebehind_gdp-bg_en_WW.jpg/74b28953-7333-418d-b154-af51c2395595/original.jpg');
+  background-position-x:35%;
+  background-position-y:0%;
+  background-size:cover;
+  display:block;
+  height:450px;
+  position:absolute;
+  width:100%;
+}
+
+.buttons {
+  background-color: #1e262c;
+  height: 70px;
+  width: 100%;
+}
+
+.button {
+  background-color: inherit;
+  color: #e1e2e4;
+  border: none;
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+  height: 64px; 
+  padding: 0px 20px;
+}
+
+.button:hover {
+  background-color: #2e363d;
+}
+
+.card {
+  border-radius: 8px;
+  background-color: white;
+  margin: 22px;
+  padding: 8px 22px;
+  border: 1px solid #dfe4e5;
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.05);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.05);
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.05);
+}
+
+.column {
+  column-count: 3;
+}
+
+h3 {
+  padding: 0px 22px;
+}
+
+.screens_grid {
+  display: -moz-grid;
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 315px);
+  grid-gap: 15px;  
+  margin: 0px 22px;
+}
+
+.screen {
+  width: 314.65px;
+  height: 176.99px;
+  -moz-background-size: 100%;
+  -webkit-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  empty-cells: hide;
+  font-family: Open Sans,sans-serif;
+}
+
+th {
+  padding: 12px 8px;
+}
+
+td {
+  padding: 10px 6px;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 0 20px;
+  margin-bottom: 10px;
+  background: #E9EFF6;
+  line-height: 40px;
+  border-width: 0;
+  border-radius: 20px;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  padding: 0 20px;
+  margin-bottom: 10px;
+  background: #E9EFF6;
+  line-height: 20px;
+  border-width: 0;
+  border-radius: 20px;
+}
+
+input[type="submit"] {
+  margin-top: 30px;
+  background: #f69a73;
+  border-bottom: 4px solid #d87d56;
+  color: white;
+  font-size: 14px;
+}
+
+#overlay_image {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  position: absolute;
+  display: none;
+  z-index: 100;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+#overlay_image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+</style>
+<body>
+
+<div id="overlay_image" onclick="close_overlay()"></div>
+
+<section class="top_header">
+  <div class="top_header_image"></div>
+</section>
+
+<div class="buttons">
+	<a href="#screens"><button class="button">Скриншоты и видеоролики</button></a>
+	<a href="#info"><button class="button">Описание</button></a>
+	<a href="#system"><button class="button">Системные требования</button></a>
+	<a href="#feedback"><button class="button">Обратная связь</button></a>
+	<a href="https://www.origin.com/rus/ru-ru/store/home-behind/home-behind" target="_blank"><button class="button">Получить игру</button></a>
+</div>
+
+<div>
+
+<div id="screens">
+<h3> Скриншоты и видеоролики </h3>
+<div class="screens_grid">
+  <img onclick="open_overlay(event)" class="screen" src="https://data2.origin.com/asset/content/dam/originx/web/app/games/home-behind/home-behind/Screenshots/1.jpg/1fe8aaee-48fb-437c-b72d-c22f0ba31647/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data3.origin.com/asset/content/dam/originx/web/app/games/home-behind/home-behind/Screenshots/2.jpg/bb449055-65ae-4091-a434-8f7d9727c160/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data4.origin.com/asset/content/dam/originx/web/app/games/home-behind/home-behind/Screenshots/3.jpg/6a512715-a2b3-4e91-98c5-4bb4465a30a2/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data1.origin.com/asset/content/dam/originx/web/app/games/home-behind/home-behind/Screenshots/4.jpg/d91a84b1-7e87-4233-ba37-2c4098fb141f/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data2.origin.com/asset/content/dam/originx/web/app/games/home-behind/home-behind/Screenshots/5.jpg/ea2c4d70-de97-40bb-b994-a24ad9a4ef2a/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data3.origin.com/asset/content/dam/originx/web/app/games/home-behind/home-behind/Screenshots/6.jpg/af96a38a-c45a-44a6-a04f-90f415eab8fa/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data4.origin.com/asset/content/dam/originx/web/app/games/home-behind/home-behind/Screenshots/7.jpg/281b4a71-e5fc-46a1-8e3a-65ecd23d1445/original.jpg"/>
+</div>
+</div>
+
+<div id="info">
+<h3> Описание </h3>
+<div class="card column">
+  <p>
+  В игре Home Behind вам предстоит стать беженцем, которого повстанцы изгнали из родной страны. Ваш мир и ваша родина разрушены, и ваша семья пропала без вести. Сможете ли вы пережить лишения, голод и болезни и добраться до безопасной Европы?<br><br>
+  Кризис на вашей родине назревал долгие годы, и в конечном итоге разразилась гражданская война. Во всеобщем хаосе была сожжена ваша деревня, а ваша дочь пропала без вести. Оказавшись на пороге смерти, вы решили бороться за жизнь и преодолеть трудности, которые несут с собой война, болезни и голод. Сможете ли вы продержаться как можно дольше, чтобы снова увидеть свою дочь?<br><br>
+  <b>Ключевые особенности:</b><br>
+  <ul>
+  <li>Все события генерируются случайным образом, и новая игра не будет похожа на предыдущую!</li>
+  <li>Следите за уровнем настроения, питания и воды, чтобы избежать страшных болезней!</li>
+  <li>Боритесь за выживание и преодолейте нелегкий путь в 1 500 километров до безопасности.</li>
+  <li>Откройте доступ к 15 специальностям со своими уникальными навыками, предметами и наградами.</li>
+  <li>Вас ждет множество как всеобщих, так и ваших личных событий, и вам предстоит вершить собственную судьбу.</li>
+  <li>Боритесь за выживание и днем, и ночью и подстраивайтесь под разные погодные условия.</li>
+  <li>Собирайте предметы и создавайте собственное оружие и броню.</li>
+  <li>Экспериментируйте, чтобы создать самое эффективное снаряжение.</li>
+  <li>Пробуйте новую еду, чтобы не умереть с голоду, и ешьте ящериц, насекомых и тушеную говядину.</li>
+  <li>Изучите мир, основанный на реальных событиях и правдивых историях.</li>
+  <li>Сражайтесь с диким животными, повстанцами и другими врагами. Сможете ли вы одолеть всех врагов и невероятно опасных боссов?</li>
+  </ul>
+  </p>
+</div>
+</div>
+
+<div id="system">
+<h3> Системные требования </h3>
+<div class="card">
+  <table>
+    <tr>
+      <td>OC</td>
+      <td>/Vista/Windows 7/8/8.1/10 (32 и 64 разряда)</td>
+    </tr>
+    <tr>
+      <td>Процессор</td>
+      <td>1,6 ГГц</td>
+    </tr>
+    <tr>
+      <td>ОЗУ</td>
+      <td>2 Гб</td>
+    </tr>
+    <tr>
+      <td>Жесткий диск</td>
+      <td>1 Гб свободного места</td>
+    </tr>
+	</table>
+</div>
+</div>
+
+<div id="feedback">
+<h3> Обратная связь </h3>
+<div class="card centered">
+  <form>
+    <h4> Написать нам </h4>
+	<input type="text" placeholder="Ваше имя"/>
+	<input type="email" placeholder="Email"/>
+	<textarea placeholder="Сообщение..." rows="3"></textarea>
+	<input style="cursor: pointer;" type="submit" value="Отправить"/>
+  </form>  
+</div>
+</div>
+
+</div>
+
+<script>
+function close_overlay() {
+  document.getElementById('overlay_image').style.display = "none";
+  
+  window.onscroll = function() {};
+}
+function open_overlay(evt) {
+  document.getElementById('overlay_image').style.display = "block";
+  document.getElementById('overlay_image').innerHTML = '<img src='+evt.currentTarget.src+' width="70%"/>';
+  
+  window.scrollTo(0, 0); 
+  scrollTop = window.pageYOffset || document.documentElement.scrollTop; 
+  scrollLeft = window.pageXOffset || document.documentElement.scrollLeft, 
+  window.onscroll = function() { 
+    window.scrollTo(scrollLeft, scrollTop); 
+  }; 
+}
+</script>
+
+</body>
+</html>

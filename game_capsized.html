@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+
+body{
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  display: block;
+  background-color: #edf1f2;
+  font-family: Open Sans,sans-serif;
+}
+
+.top_header {
+  background-color:rgb(30, 38, 44);
+  height:450px;
+  min-height:450px;
+  position:relative;
+  width:100%;
+  margin: 0;
+  padding: 0;
+}
+
+.top_header_image {
+  background-image:url('https://data3.origin.com/asset/content/dam/originx/web/app/games/capsized/capsized/Capsized_gdp-bg_en_WW.jpg/dd0d1579-c1fa-422f-b25f-c4dc13d1a7db/original.jpg');
+  background-position-x:35%;
+  background-position-y:0%;
+  background-size:cover;
+  display:block;
+  height:450px;
+  position:absolute;
+  width:100%;
+}
+
+.buttons {
+  background-color: #1e262c;
+  height: 70px;
+  width: 100%;
+}
+
+.button {
+  background-color: inherit;
+  color: #e1e2e4;
+  border: none;
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+  height: 64px; 
+  padding: 0px 20px;
+}
+
+.button:hover {
+  background-color: #2e363d;
+}
+
+.card {
+  border-radius: 8px;
+  background-color: white;
+  margin: 22px;
+  padding: 8px 22px;
+  border: 1px solid #dfe4e5;
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.05);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.05);
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.05);
+}
+
+.column {
+  column-count: 3;
+}
+
+h3 {
+  padding: 0px 22px;
+}
+
+.screens_grid {
+  display: -moz-grid;
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 315px);
+  grid-gap: 15px;  
+  margin: 0px 22px;
+}
+
+.screen {
+  width: 314.65px;
+  height: 176.99px;
+  -moz-background-size: 100%;
+  -webkit-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  empty-cells: hide;
+  font-family: Open Sans,sans-serif;
+}
+
+th {
+  padding: 12px 8px;
+}
+
+td {
+  padding: 10px 6px;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 0 20px;
+  margin-bottom: 10px;
+  background: #E9EFF6;
+  line-height: 40px;
+  border-width: 0;
+  border-radius: 20px;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  padding: 0 20px;
+  margin-bottom: 10px;
+  background: #E9EFF6;
+  line-height: 20px;
+  border-width: 0;
+  border-radius: 20px;
+}
+
+input[type="submit"] {
+  margin-top: 30px;
+  background: #f69a73;
+  border-bottom: 4px solid #d87d56;
+  color: white;
+  font-size: 14px;
+}
+
+#overlay_image {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  position: absolute;
+  display: none;
+  z-index: 100;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+#overlay_image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+</style>
+<body>
+
+<div id="overlay_image" onclick="close_overlay()"></div>
+
+<section class="top_header">
+  <div class="top_header_image"></div>
+</section>
+
+<div class="buttons">
+	<a href="#screens"><button class="button">Скриншоты и видеоролики</button></a>
+	<a href="#info"><button class="button">Описание</button></a>
+	<a href="#system"><button class="button">Системные требования</button></a>
+	<a href="#feedback"><button class="button">Обратная связь</button></a>
+	<a href="https://www.origin.com/rus/ru-ru/store/capsized/capsized" target="_blank"><button class="button">Получить игру</button></a>
+</div>
+
+<div>
+
+<div id="screens">
+<h3> Скриншоты и видеоролики </h3>
+<div class="screens_grid">
+  <img onclick="open_overlay(event)" class="screen" src="https://data4.origin.com/asset/content/dam/originx/web/app/games/capsized/capsized/Screenshots/1.jpg/1f9f6262-43ab-47d8-b614-cdf6b4b17c0e/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data1.origin.com/asset/content/dam/originx/web/app/games/capsized/capsized/Screenshots/2.jpg/aa14f32b-8ddd-4b40-ae30-44338686f87d/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data2.origin.com/asset/content/dam/originx/web/app/games/capsized/capsized/Screenshots/3.jpg/55dbe1eb-6672-4d34-a262-e907b82ec42e/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data3.origin.com/asset/content/dam/originx/web/app/games/capsized/capsized/Screenshots/4.jpg/100e98b5-faa2-4a02-8010-bfd53bcb802b/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data4.origin.com/asset/content/dam/originx/web/app/games/capsized/capsized/Screenshots/5.jpg/c085fe86-a15b-4a0c-9073-bec5d93eedb5/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data1.origin.com/asset/content/dam/originx/web/app/games/capsized/capsized/Screenshots/6.jpg/589c73ea-2bb2-45ef-97f5-c46f45d6d28e/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data2.origin.com/asset/content/dam/originx/web/app/games/capsized/capsized/Screenshots/7.jpg/4c9cd9e6-249f-427a-a814-1ccee1facdcc/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data3.origin.com/asset/content/dam/originx/web/app/games/capsized/capsized/Screenshots/8.jpg/b7a3a1da-d3da-4127-9c65-ab21ec0c7fd5/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data4.origin.com/asset/content/dam/originx/web/app/games/capsized/capsized/Screenshots/9.jpg/bdfa7a6d-4d9c-4ff2-b190-7c46f63bd03a/original.jpg"/>
+</div>
+</div>
+
+<div id="info">
+<h3> Описание </h3>
+<div class="card column">
+  <p>
+  Capsized — это динамичный двумерный платформер, делающий упор на напряженные бои и исследование местности. Вы — отважный космический путешественник, чей корабль потерпел крушение на таинственной чужой планете. Ваша задача — спасти своих товарищей и уйти с этой планеты живыми, пройдя через опасную среду и отбившись от кровожадных созданий!<br><br>
+  Художник Джесси МакГибни и программист Ли Вермейлен создали захватывающий неземной мир, наполненный причудливыми формами жизни и странными ландшафтами, которые подаются в уникальном стиле рисунка от руки. Совмещая элементы управления шутеров от первого лица и инновационную систему боя, основанную на использовании законов физики, Capsized делает акцент на действии, не отказываясь при этом от требующих смекалки задач, присущих классическим платформенным играм.<br><br>
+  Летайте по неземным джунглям с помощью своего реактивного ранца, а также используйте инструменты вроде гравитационного крюка, чтобы мастерски обходить и побеждать нападающих противников, манипулируя всем, что вас окружает. Вас ждёт проверка на прочность — платформингом, решением головоломок и смертельными схватками, причём нередко всем сразу!<br><br>
+  <b>Ключевые особенности</b><br><br>
+  <li>Детализированные инопланетные ландшафты и создания, с любовью нарисованные от руки в высоком разрешении.</li>
+  <li>Кампания из 12 заданий, содержащая огромные нелинейные пространства, множество разнообразных целей и противников, а также захватывающие видеовставки, стилизованные под комиксы.</li>
+  <li>4 дополнительных открываемых аркадных режима, включающих локальные бои насмерть и совместное прохождение, а также выживание, прохождение на скорость и бои без оружия.</li>
+  <li>Смертоносный футуристический арсенал оружия и устройств, таких как гравитаран, ракетный ранец, энергетический щит и квазарная матрица.</li>
+  <li>Управление, навеянное классическими шутерами от первого лица и делающее упор на умелое перемещение, изобретательные тактики и сумасшедшие бои.</li>
+  </p>
+</div>
+</div>
+
+<div id="system">
+<h3> Системные требования </h3>
+<div class="card">
+  <table>
+    <tr>
+      <td>OC</td>
+      <td>Windows , Windows , Windows 7</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Процессор</td>
+      <td>двухъядерный процессор (Intel Dual Core с частотой 2 ГГц или AMD Athlon X2 5200+ с частотой 2,6 ГГц)</td>
+    </tr>
+    <tr>
+      <td>ОЗУ</td>
+      <td>1,5 Гб</td>
+    </tr>
+    <tr>
+      <td>Видеокарта</td>
+      <td>совместимая с DirectX 9.0c</td>
+    </tr>
+    <tr>
+      <td>Жесткий диск</td>
+      <td>1 Гб</td>
+      <td></td>
+    </tr>
+	</table>
+</div>
+</div>
+
+<div id="feedback">
+<h3> Обратная связь </h3>
+<div class="card centered">
+  <form>
+    <h4> Написать нам </h4>
+	<input type="text" placeholder="Ваше имя"/>
+	<input type="email" placeholder="Email"/>
+	<textarea placeholder="Сообщение..." rows="3"></textarea>
+	<input style="cursor: pointer;" type="submit" value="Отправить"/>
+  </form>  
+</div>
+</div>
+
+</div>
+
+<script>
+function close_overlay() {
+  document.getElementById('overlay_image').style.display = "none";
+  
+  window.onscroll = function() {};
+}
+function open_overlay(evt) {
+  document.getElementById('overlay_image').style.display = "block";
+  document.getElementById('overlay_image').innerHTML = '<img src='+evt.currentTarget.src+' width="70%"/>';
+  
+  window.scrollTo(0, 0); 
+  scrollTop = window.pageYOffset || document.documentElement.scrollTop; 
+  scrollLeft = window.pageXOffset || document.documentElement.scrollLeft, 
+  window.onscroll = function() { 
+    window.scrollTo(scrollLeft, scrollTop); 
+  }; 
+}
+</script>
+
+</body>
+</html>

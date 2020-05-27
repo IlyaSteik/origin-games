@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+
+body{
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  display: block;
+  background-color: #edf1f2;
+  font-family: Open Sans,sans-serif;
+}
+
+.top_header {
+  background-color:rgb(30, 38, 44);
+  height:450px;
+  min-height:450px;
+  position:relative;
+  width:100%;
+  margin: 0;
+  padding: 0;
+}
+
+.top_header_image {
+  background-image:url(https://data3.origin.com/asset/content/dam/originx/web/app/games/apex/apex/F2P/season-5/APEXLS5_ORIGIN_GDP_BG_4800x1200_en_WW.jpg/5df3f9db-3a4b-4c5f-b27c-a9c8febd9dd0/original.jpg);
+  background-position-x:35%;
+  background-position-y:0%;
+  background-size:cover;
+  display:block;
+  height:450px;
+  position:absolute;
+  width:100%;
+}
+
+.buttons {
+  background-color: #1e262c;
+  height: 70px;
+  width: 100%;
+}
+
+.button {
+  background-color: inherit;
+  color: #e1e2e4;
+  border: none;
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+  height: 64px; 
+  padding: 0px 20px;
+}
+
+.button:hover {
+  background-color: #2e363d;
+}
+
+.card {
+  border-radius: 8px;
+  background-color: white;
+  margin: 22px;
+  padding: 8px 22px;
+  border: 1px solid #dfe4e5;
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.05);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.05);
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.05);
+}
+
+.column {
+  column-count: 3;
+}
+
+h3 {
+  padding: 0px 22px;
+}
+
+.screens_grid {
+  display: -moz-grid;
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 315px);
+  grid-gap: 15px;  
+  margin: 0px 22px;
+}
+
+.screen {
+  width: 314.65px;
+  height: 176.99px;
+  -moz-background-size: 100%;
+  -webkit-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  empty-cells: hide;
+  font-family: Open Sans,sans-serif;
+}
+
+th {
+  padding: 12px 8px;
+}
+
+td {
+  padding: 10px 6px;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 0 20px;
+  margin-bottom: 10px;
+  background: #E9EFF6;
+  line-height: 40px;
+  border-width: 0;
+  border-radius: 20px;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  padding: 0 20px;
+  margin-bottom: 10px;
+  background: #E9EFF6;
+  line-height: 20px;
+  border-width: 0;
+  border-radius: 20px;
+}
+
+input[type="submit"] {
+  margin-top: 30px;
+  background: #f69a73;
+  border-bottom: 4px solid #d87d56;
+  color: white;
+  font-size: 14px;
+}
+
+#overlay_image {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  position: absolute;
+  display: none;
+  z-index: 100;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+#overlay_image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+</style>
+<body>
+
+<div id="overlay_image" onclick="close_overlay()"></div>
+
+<section class="top_header">
+  <div class="top_header_image"></div>
+</section>
+
+<div class="buttons">
+	<a href="#screens"><button class="button">Скриншоты и видеоролики</button></a>
+	<a href="#info"><button class="button">Описание</button></a>
+	<a href="#system"><button class="button">Системные требования</button></a>
+	<a href="#feedback"><button class="button">Обратная связь</button></a>
+	<a href="https://www.origin.com/rus/ru-ru/store/apex/apex" target="_blank"><button class="button">Получить игру</button></a>
+</div>
+
+<div>
+
+<div id="screens">
+<h3> Скриншоты и видеоролики </h3>
+<div class="screens_grid">
+  <iframe width="314.65px" height="176.99px" src="https://www.youtube.com/embed/nQDbSIhd-Vk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe width="314.65px" height="176.99px" src="https://www.youtube.com/embed/oanOHZOsIg8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe width="314.65px" height="176.99px" src="https://www.youtube.com/embed/CsekwhShyFc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <img onclick="open_overlay(event)" class="screen" src="https://data4.origin.com/asset/content/dam/originx/web/app/games/apex/apex/F2P/season-5/screenshots/APEX_Legends_Screenshot_Season5_Quest_02_Drill.jpg/adf60a50-c9b8-44fa-aaec-c9f01abb16cf/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data1.origin.com/asset/content/dam/originx/web/app/games/apex/apex/F2P/season-5/screenshots/APEX_Legends_Screenshot_Season5_BnA_02_Skulltown_After.jpg/0c742fe5-2d5f-4734-8053-c8dc683a0d7c/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data2.origin.com/asset/content/dam/originx/web/app/games/apex/apex/F2P/season-5/screenshots/APEX_Legends_Screenshot_Season5_BnA_04_Capacitor_After.jpg/55552b46-9e89-458f-a933-d5f133dd29da/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data3.origin.com/asset/content/dam/originx/web/app/games/apex/apex/F2P/season-5/screenshots/APEX_Legends_Screenshot_Season5_BnA_06_CapacitorRig_After.jpg/395b8e5e-dd78-4854-8d4b-ae2332066a67/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data4.origin.com/asset/content/dam/originx/web/app/games/apex/apex/F2P/season-5/screenshots/APEX_Legends_Screenshot_Season5_BnA_08_Rig_After.jpg/c22fe6bc-e718-4597-861a-98ca04ad7878/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data3.origin.com/asset/content/dam/originx/web/app/games/apex/apex/F2P/season-5/screenshots/APEX_Legends_Screenshot_Season5_Quest_01_WattsonProwlers.jpg/f47f3656-48f0-4054-b08d-138cd12d5ae0/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data1.origin.com/asset/content/dam/originx/web/app/games/apex/apex/F2P/season-5/screenshots/APEX_Legends_Screenshot_Season5_Loba_03_vsRev.jpg/f2f6d11b-a59d-41e8-8a54-2aae666d6048/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data2.origin.com/asset/content/dam/originx/web/app/games/apex/apex/F2P/season-5/screenshots/APEX_Legends_Screenshot_Season5_Loba_04_StaffPoint.jpg/1a51f6fd-81b4-4964-91b4-d713f7018736/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data3.origin.com/asset/content/dam/originx/web/app/games/apex/apex/F2P/season-5/screenshots/APEX_Legends_Screenshot_Season5_Loba_05_SlowWalk.jpg/c134f843-fcfb-4a0d-a34a-c5fff2c08761/original.jpg"/>
+</div>
+</div>
+
+<div id="info">
+<h3> Описание </h3>
+<div class="card column">
+  <p>Покорите вершину славы в Apex Legends, бесплатном шутере в жанре королевской битвы, где легендарные персонажи с мощными умениями сражаются за звание лучших на всем Фронтире. Освойте стиль боя каждой легенды, число которых постоянно растет, а также тонкости тактической игры в отряде и смелые новшества, поднявшие планку жанра на новый уровень. Добро пожаловать в мир хищников, где нет ни законов, ни правил. Добро пожаловать в королевскую битву следующего поколения.</p>
+  
+  <ul>
+	<b>Разнообразие легендарных персонажей</b>
+    <li>Освойте стиль боя каждой легенды, число которых постоянно растет. Каждый из бойцов обладает своими индивидуальными чертами характера, тактическими преимуществами и интуитивно понятными умениями, которые испытают ваши навыки на прочность.</li>
+    <br><b>Отряд победителей</b>
+   <li>Выберите легенду и объедините ваши уникальные боевые способности с силами других игроков, создав непобедимый отряд.</li>
+	<br><b>Стратегическая королевская битва</b>   
+   <li>От умений вашего персонажа — и вашего умения принимать молниеносные решения, опираясь на сильные стороны стратегии вашего отряда, — зависит исход матча.</li>
+	<br><b>Идеи, преобразившие жанр</b>
+	<li>Опробуйте новшества, которые подняли планку жанра королевской битвы на новый уровень: маяки возрождения, умная система связи, продвинутый игровой инвентарь, а также совершенно новый способ высадки на поле боя с участием выпускающего.</li>
+	<br><b>Желанная добыча</b>
+	<li>Приземлившись на поле боя, отправляйтесь на поиски добычи: мощного оружия, разнообразных модификаций и брони, которая не раз спасет вашу жизнь. Открывайте новые способы изменить внешность персонажей и оружия, чтобы произвести впечатление на друзей и врагов во время матча.</li>
+  </ul>
+  
+</div>
+</div>
+
+<div id="system">
+<h3> Системные требования </h3>
+<div class="card">
+  <table>
+    <tr>
+      <th></th>
+      <th>МИНИМАЛЬНЫЕ СИСТЕМНЫЕ ТРЕБОВАНИЯ</th>
+      <th>РЕКОМЕНДУЕМЫЕ СИСТЕМНЫЕ ТРЕБОВАНИЯ</th>
+    </tr>
+    <tr>
+      <td>OC</td>
+      <td>64-разрядная версия Windows 7/8.1/10</td>
+      <td>64-разрядная версия Windows 7/8.1/10</td>
+    </tr>
+    <tr>
+      <td>Процессор (AMD)</td>
+      <td>AMD FX 4350 или аналогичный</td>
+      <td>AMD Ryzen 5 или аналогичный</td>
+    </tr>
+    <tr>
+      <td>Процессор (Intel)</td>
+      <td>Intel Core i3 6300 или аналогичный</td>
+      <td>Intel Core i5 3570K или аналогичный</td>
+    </tr>
+    <tr>
+      <td>ОЗУ</td>
+      <td>6 ГБ DDR3, 1333 МГц</td>
+      <td>8 ГБ DDR3, 1333 МГц</td>
+    </tr>
+    <tr>
+      <td>Видеокарта (AMD)</td>
+      <td>AMD Radeon HD 7730</td>
+      <td>AMD Radeon R9 290</td>
+    </tr>
+    <tr>
+      <td>Видеокарта (NVIDIA)</td>
+      <td>NVIDIA GT 640</td>
+      <td>NVIDIA GTX 970</td>
+    </tr>
+    <tr>
+      <td>DirectX</td>
+      <td>совместимая с DirectX 11 видеокарта или ее эквивалент</td>
+      <td>совместимая с DirectX 11 видеокарта или ее эквивалент</td>
+    </tr>
+    <tr>
+      <td>Жесткий диск</td>
+      <td>22 ГБ</td>
+      <td>22 ГБ</td>
+    </tr>
+	</table>
+</div>
+</div>
+
+<div id="feedback">
+<h3> Обратная связь </h3>
+<div class="card centered">
+  <form>
+    <h4> Написать нам </h4>
+	<input type="text" placeholder="Ваше имя"/>
+	<input type="email" placeholder="Email"/>
+	<textarea placeholder="Сообщение..." rows="3"></textarea>
+	<input style="cursor: pointer;" type="submit" value="Отправить"/>
+  </form>  
+</div>
+</div>
+
+</div>
+
+<script>
+function close_overlay() {
+  document.getElementById('overlay_image').style.display = "none";
+  
+  window.onscroll = function() {};
+}
+function open_overlay(evt) {
+  document.getElementById('overlay_image').style.display = "block";
+  document.getElementById('overlay_image').innerHTML = '<img src='+evt.currentTarget.src+' width="70%"/>';
+  
+  window.scrollTo(0, 0); 
+  scrollTop = window.pageYOffset || document.documentElement.scrollTop; 
+  scrollLeft = window.pageXOffset || document.documentElement.scrollLeft, 
+  window.onscroll = function() { 
+    window.scrollTo(scrollLeft, scrollTop); 
+  }; 
+}
+</script>
+
+</body>
+</html>

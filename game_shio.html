@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+
+body{
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  display: block;
+  background-color: #edf1f2;
+  font-family: Open Sans,sans-serif;
+}
+
+.top_header {
+  background-color:rgb(30, 38, 44);
+  height:450px;
+  min-height:450px;
+  position:relative;
+  width:100%;
+  margin: 0;
+  padding: 0;
+}
+
+.top_header_image {
+  background-image:url('https://data2.origin.com/asset/content/dam/originx/web/app/games/shio/shio/Shio_gdp_bg_2400x600_en_WW.jpg/ceefccaa-d7f2-4804-9063-2fab2051455b/original.jpg');
+  background-position-x:35%;
+  background-position-y:0%;
+  background-size:cover;
+  display:block;
+  height:450px;
+  position:absolute;
+  width:100%;
+}
+
+.buttons {
+  background-color: #1e262c;
+  height: 70px;
+  width: 100%;
+}
+
+.button {
+  background-color: inherit;
+  color: #e1e2e4;
+  border: none;
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+  height: 64px; 
+  padding: 0px 20px;
+}
+
+.button:hover {
+  background-color: #2e363d;
+}
+
+.card {
+  border-radius: 8px;
+  background-color: white;
+  margin: 22px;
+  padding: 8px 22px;
+  border: 1px solid #dfe4e5;
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.05);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.05);
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.05);
+}
+
+.column {
+  column-count: 3;
+}
+
+h3 {
+  padding: 0px 22px;
+}
+
+.screens_grid {
+  display: -moz-grid;
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 315px);
+  grid-gap: 15px;  
+  margin: 0px 22px;
+}
+
+.screen {
+  width: 314.65px;
+  height: 176.99px;
+  -moz-background-size: 100%;
+  -webkit-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  empty-cells: hide;
+  font-family: Open Sans,sans-serif;
+}
+
+th {
+  padding: 12px 8px;
+}
+
+td {
+  padding: 10px 6px;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 0 20px;
+  margin-bottom: 10px;
+  background: #E9EFF6;
+  line-height: 40px;
+  border-width: 0;
+  border-radius: 20px;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  padding: 0 20px;
+  margin-bottom: 10px;
+  background: #E9EFF6;
+  line-height: 20px;
+  border-width: 0;
+  border-radius: 20px;
+}
+
+input[type="submit"] {
+  margin-top: 30px;
+  background: #f69a73;
+  border-bottom: 4px solid #d87d56;
+  color: white;
+  font-size: 14px;
+}
+
+#overlay_image {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  position: absolute;
+  display: none;
+  z-index: 100;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+#overlay_image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+</style>
+<body>
+
+<div id="overlay_image" onclick="close_overlay()"></div>
+
+<section class="top_header">
+  <div class="top_header_image"></div>
+</section>
+
+<div class="buttons">
+	<a href="#screens"><button class="button">Скриншоты и видеоролики</button></a>
+	<a href="#info"><button class="button">Описание</button></a>
+	<a href="#system"><button class="button">Системные требования</button></a>
+	<a href="#feedback"><button class="button">Обратная связь</button></a>
+	<a href="https://www.origin.com/rus/ru-ru/store/shio/shio" target="_blank"><button class="button">Получить игру</button></a>
+</div>
+
+<div>
+
+<div id="screens">
+<h3> Скриншоты и видеоролики </h3>
+<div class="screens_grid">
+  <img onclick="open_overlay(event)" class="screen" src="https://data4.origin.com/asset/content/dam/originx/web/app/games/shio/shio/Screenshots/Shio_Screenshot1.jpg/31a3ff37-6dd0-45dc-a987-1208d9bce6ef/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data1.origin.com/asset/content/dam/originx/web/app/games/shio/shio/Screenshots/Shio_Screenshot2.jpg/a836447a-f4b8-49e2-999f-3b8757b4451d/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data2.origin.com/asset/content/dam/originx/web/app/games/shio/shio/Screenshots/Shio_Screenshot3.jpg/7475c790-f6ef-4c80-8fac-2235ce9de24a/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data3.origin.com/asset/content/dam/originx/web/app/games/shio/shio/Screenshots/Shio_Screenshot4.jpg/b6ca36fa-3b86-41be-a66f-cecd0ed98f9f/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data4.origin.com/asset/content/dam/originx/web/app/games/shio/shio/Screenshots/Shio_Screenshot5.jpg/07b3759e-cb88-4a12-8899-a4d7b2db5e07/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data1.origin.com/asset/content/dam/originx/web/app/games/shio/shio/Screenshots/Shio_Screenshot6.jpg/2d716bff-5f4f-484f-8b53-c618436c4e1e/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data2.origin.com/asset/content/dam/originx/web/app/games/shio/shio/Screenshots/Shio_Screenshot7.jpg/f19d16a5-c068-4669-9c34-c8fe3ebedb5d/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data3.origin.com/asset/content/dam/originx/web/app/games/shio/shio/Screenshots/Shio_Screenshot8.jpg/552e4607-d008-4b78-a5d7-87b3b73c1b24/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data4.origin.com/asset/content/dam/originx/web/app/games/shio/shio/Screenshots/ShioScreenshot9.jpg/e6bcc90d-52fa-4729-9555-f72b6f7e53d8/original.jpg"/>
+</div>
+</div>
+
+<div id="info">
+<h3> Описание </h3>
+<div class="card column">
+  <p>
+  Кто этот человек в маске? Что это за место? Почему он видит во сне одну и ту же девушку? Сыграйте в Shio, чтобы найти ответы для таинственного незнакомца — и для себя.<br><br>
+  Shio — это увлекательный платформер с интерактивным и плавным геймплеем и неповторимым живописным стилем. В игре удивительно сочетаются механика динамических прыжков по мотивам старых фильмов про кунг-фу и неожиданные препятствия. По мере продвижения элементы и механика игрового процесса предыдущих уровней создают новые, невероятно сложные уровни, которые будет очень интересно проходить.<br><br>
+  Вам предстоит стать таинственным воином с неизвестными прошлым и с помощью своих и его навыков пройти суровый лабиринт в древней китайской деревне, созданный неизвестными мастерами. Постепенно история будет проясняться, и вы узнаете про прошлое героя и поможете ему найти цель за пределами лабиринта.<br><br>
+  <b>Ключевые особенности:</b><br><br>
+  <b>Оригинальный платформер</b><br>
+  Вам еще никогда не приходилось преодолевать такие трудности, прыгая по фонарикам. Единственный враг в Shio — окружающая среда, и она пойдет на все, чтобы вас остановить.<br><br>
+  <b>Атмосферный игровой процесс</b><br>
+  Игра разделена на четыре главы, в каждой из которых вы попадете в уникальную атмосферу и погодные условия. Погода сильно влияет на испытания, которые вам предстоит пройти.<br><br>
+  <b>Разнообразные ловушки</b><br>
+  На пути вас ждут целое разнообразие ловушек и препятствий. Ваша задача — понять, как они работают, и научиться их обходить, чтобы изучить игровой мир.<br><br>
+  <b>Фоновая музыка</b><br>
+  Какая игра без музыкального сопровождения? Музыке в Shio уделено значительное внимание, и для каждой главы написан свой собственный саундтрек.<br><br>
+  <b>Грустная и загадочная история</b><br>
+  Ключевым фактором в игре, который сподвигнет вам проходить сложнейшие испытания в мире Shio, является история таинственного незнакомца. Никто толком не знает, что с ним произошло и почему он хранит молчание.
+  </p>
+</div>
+</div>
+
+<div id="system">
+<h3> Системные требования </h3>
+<div class="card">
+  <table>
+    <tr>
+      <th></th>
+      <th>МИНИМАЛЬНЫЕ СИСТЕМНЫЕ ТРЕБОВАНИЯ</th>
+      <th>РЕКОМЕНДУЕМЫЕ СИСТЕМНЫЕ ТРЕБОВАНИЯ</th>
+    </tr>
+    <tr>
+      <td>OC</td>
+      <td>Windows 7, Windows 8, 8.1, Windows 10</td>
+      <td>Windows 7, Windows 8, 8.1, Windows 10</td>
+    </tr>
+    <tr>
+      <td>Процессор</td>
+      <td>Intel core i5 2557M</td>
+      <td>Intel core i5 3570</td>
+    </tr>
+    <tr>
+      <td>Видеокарта</td>
+      <td>GeForce GT440 или HD5570</td>
+      <td>Geforce GT 740 или HD6790</td>
+    </tr>
+    <tr>
+      <td>DirectX</td>
+      <td>версия 9.0c</td>
+      <td>версия 9.0c</td>
+    </tr>
+    <tr>
+      <td>Жесткий диск</td>
+      <td>4 Гб свободного места</td>
+      <td>8 Гб свободного места</td>
+    </tr>
+	</table>
+</div>
+</div>
+
+<div id="feedback">
+<h3> Обратная связь </h3>
+<div class="card centered">
+  <form>
+    <h4> Написать нам </h4>
+	<input type="text" placeholder="Ваше имя"/>
+	<input type="email" placeholder="Email"/>
+	<textarea placeholder="Сообщение..." rows="3"></textarea>
+	<input style="cursor: pointer;" type="submit" value="Отправить"/>
+  </form>  
+</div>
+</div>
+
+</div>
+
+<script>
+function close_overlay() {
+  document.getElementById('overlay_image').style.display = "none";
+  
+  window.onscroll = function() {};
+}
+function open_overlay(evt) {
+  document.getElementById('overlay_image').style.display = "block";
+  document.getElementById('overlay_image').innerHTML = '<img src='+evt.currentTarget.src+' width="70%"/>';
+  
+  window.scrollTo(0, 0); 
+  scrollTop = window.pageYOffset || document.documentElement.scrollTop; 
+  scrollLeft = window.pageXOffset || document.documentElement.scrollLeft, 
+  window.onscroll = function() { 
+    window.scrollTo(scrollLeft, scrollTop); 
+  }; 
+}
+</script>
+
+</body>
+</html>

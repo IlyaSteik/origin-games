@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Игры</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+body {font-family: "Lato", sans-serif; margin: 0; display: flex; border: 0; background-color: #edf1f2;}
+
+/* Style the tab */
+.tab {
+  float: left;
+  background-color: #1e262c;
+  width: 280px;
+  height: 100vh;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: #e1e2e4;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  padding-right: 16px;
+  padding-left: 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+  height: 64px; 
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #2e363d;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #4c5259;
+}
+.tab button.active:before {
+  content: '';
+  position: absolute;
+  border-color: #f56c2d;
+  border-style: solid;
+  border-width: 0 0.3em 64px 0;
+  margin-bottom: 10px;
+  transform: translate(-16px,-22px);
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(245,108,45,1);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(245,108,45,1);
+  box-shadow: 0px 0px 10px 0px rgba(245,108,45,1);
+}
+
+/* Style the tab content */
+.tabcontent {
+  outline: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  float: left;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Style container of origin logo*/
+.container_originlogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Style origin logo*/
+.originlogo {
+  height: 50px;
+}
+  
+.grid {
+  display: -moz-grid;
+  display: -ms-grid;
+  width: calc(100vw-250px);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 266px);
+  grid-gap: 25px;  
+}
+  
+.card:hover {
+  transform: scale(1.05, 1.05);
+}
+
+.card {
+  border-radius: 20px;
+  width: 266px;
+  height: 183px;
+  -webkit-box-shadow: 0px 0px 54px 0px rgba(0,0,0,0.15);
+  -moz-box-shadow: 0px 0px 54px 0px rgba(0,0,0,0.15);
+  box-shadow: 0px 0px 54px 0px rgba(0,0,0,0.15);
+  background-attachment:scroll;
+  background-clip:border-box;
+  background-color:rgb(20, 27, 32);
+  background-image:none;
+  background-origin:padding-box;
+  background-size:auto;
+  color:rgb(85, 26, 139);
+  cursor:pointer;
+  display:block;
+  font-family:"Open Sans", sans-serif;
+  height:183.984px;
+  list-style-type:none;
+  overflow-x:hidden;
+  overflow-y:hidden;
+  position:relative;
+  text-align:left;
+  text-decoration-color:rgb(0, 0, 238);
+  text-decoration-line:underline;
+  text-decoration-style:solid;
+  text-rendering:optimizelegibility;
+  transition-delay:0s;
+  transition-duration:0.15s;
+  transition-property:all;
+  transition-timing-function:ease-out;
+  width:266.699px;
+}
+  
+.card:after {
+  backface-visibility:hidden;
+  background-attachment:scroll;
+  background-clip:border-box;
+  background-color:rgba(0, 0, 0, 0);
+  background-image:linear-gradient(rgba(0, 0, 0, 0) 20%, rgba(20, 27, 32, 0.5) 60%, rgba(20, 27, 32, 0.8));
+  background-origin:padding-box;
+  background-size:auto;
+  bottom:0px;
+  content:"";
+  display:block;
+  height:183.984px;
+  left:0px;
+  position:absolute;
+  right:0px;
+  top:0px;
+  width:266.699px;  
+}
+  
+.card_img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-attachment:scroll;
+  bottom:-91.9922px;
+  color:rgb(85, 26, 139);
+  cursor:pointer;
+  display:block;
+  font-family:"Open Sans", sans-serif;
+  height:183.984px;
+  left:133.34px;
+  list-style-type:none;
+  position:absolute;
+  right:-602.578px;
+  text-align:left;
+  text-rendering:optimizelegibility;
+  top:91.9922px;
+  transform:matrix(1, 0, 0, 1, -367.5, -91.875);
+  width:735.938px;
+}
+  
+.card_details {
+  backface-visibility:hidden;
+  bottom:0px;
+  box-sizing:border-box;
+  color:rgb(255, 0, 0);
+  cursor:pointer;
+  display:block;
+  font-family:"Open Sans", sans-serif;
+  left:0px;
+  list-style-type:none;
+  padding-bottom:12px;
+  padding-left:12px;
+  padding-right:12px;
+  padding-top:12px;
+  position:absolute;
+  text-align:left;
+  text-rendering:optimizelegibility;
+  transform:matrix(1, 0, 0, 1, 0, 0);
+  width:266.699px;
+  z-index:1;
+}
+  
+.card_details h1 {
+  color:rgb(255, 255, 255);
+  cursor:pointer;
+  display:-webkit-box;
+  font-family:"Open Sans", sans-serif;
+  font-size:18px;
+  font-weight:400;
+  height:45.5px;
+  line-height:24px;
+  list-style-type:none;
+  margin-bottom:0px;
+  margin-left:0px;
+  margin-right:0px;
+  margin-top:0px;
+  max-height:72px;
+  overflow-x:hidden;
+  overflow-y:hidden;
+  text-align:left;
+  text-rendering:optimizelegibility;
+  width:242.715px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="tab">
+  <div class="container_originlogo"><img vspace="30" class="originlogo" src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Origin.svg" /></div>
+  <button class="tablinks" onclick="openTab(event, 'popular')" id="defaultOpen">Популярные</button>
+  <button class="tablinks" onclick="openTab(event, 'news')">Новинки</button>
+  <button class="tablinks" onclick="openTab(event, 'aboutus')">О сайте</button>
+</div>
+
+<div id="popular" class="tabcontent" style="padding: 0px 12px;">
+  <h3>Популярные игры</h3>
+  <p>Здесь контент - карточки с играми</p>
+  <div class="grid">
+    
+    <div class="card" onclick="openTab(event, 'game_info_jedai')">
+      <img class="card_img" src="https://data3.origin.com/asset/content/dam/originx/web/app/games/star-wars/star-wars-jedi-fallen-order/gdp/SWJFO_ORIGIN_Hometile_2000x500_en_WW.jpg/a75435cb-8d42-43c9-a0d4-8f30078f003a/original.jpg">
+      <div class="card_details">
+        <h1 class="h1">ЗВЁЗДНЫЕ ВОЙНЫ Джедаи: Павший Орден</h1>
+      </div>
+    </div>
+    
+    <div class="card" onclick="openTab(event, 'game_info_anthem')">
+      <img class="card_img" src="https://data3.origin.com/content/dam/originx/web/app/games/anthem/anthem/standard-edition/anthem_hometile_2000x500_en_US.jpg">
+      <div class="card_details">
+        <h1 class="h1">Anthem™</h1>
+      </div>
+    </div>
+    
+    <div class="card" onclick="openTab(event, 'game_info_bf5')">
+      <img class="card_img" src="https://data2.origin.com/asset/content/dam/originx/web/app/games/battlefield/battlefield-v/battlefieldv_standard-edition_hometile_2000x500_en_WW.jpg/9a70ca78-b6ee-4bd6-83f2-9e32f299a847/original.jpg">
+      <div class="card_details">
+        <h1 class="h1">Battlefield™ V</h1>
+      </div>
+    </div>
+    
+    <div class="card" onclick="openTab(event, 'game_info_sims4')">
+      <img class="card_img" src="https://data1.origin.com/asset/content/dam/originx/web/app/games/the-sims/the-sims-4/expansion-packs/EP9-Eco-Lifestyle/originassets/SIMS4EP9_ORIGIN_Hometile_2000x500_en_WW.jpg/a38f002b-3dd1-4526-8bb3-6e0e574a634d/original.jpg">
+      <div class="card_details">
+        <h1 class="h1">The Sims™ 4 Экологичная жизнь</h1>
+      </div>
+    </div>
+    
+    <div class="card" onclick="openTab(event, 'game_info_nfs')">
+      <img class="card_img" src="https://data3.origin.com/asset/content/dam/originx/web/app/games/need-for-speed/need-for-speed-heat/NFSH_ORIGIN_Hometile_2000x500_en_WW.jpg/a7960ef9-5131-4144-a82a-fe8d17eb1d03/original.jpg">
+      <div class="card_details">
+        <h1 class="h1">Need for Speed™ Heat — ключи к карте</h1>
+      </div>
+    </div>
+    
+     <div class="card" onclick="openTab(event, 'game_info_titanfall2')">
+      <img class="card_img" src="https://data4.origin.com/content/dam/originx/web/app/games/titanfall/titanfall-2/titanfall-2-standard-edition_hometile_2000x500_en_WW.jpg">
+      <div class="card_details">
+        <h1 class="h1">Titanfall™ 2</h1>
+      </div>
+    </div>
+    
+    <div class="card" onclick="openTab(event, 'game_info_deadspace')">
+      <img class="card_img" src="https://data2.origin.com/content/dam/originx/web/app/games/dead-space/dead-space/dead-space-standard-edition_hometile_2000x500_en_WW.jpg">
+      <div class="card_details">
+        <h1 class="h1">Dead Space™</h1>
+      </div>
+    </div>
+    
+    <div class="card" onclick="openTab(event, 'game_info_apex')">
+      <img class="card_img" src="https://data3.origin.com/asset/content/dam/originx/web/app/games/apex/apex/F2P/season-5/APEXLS5_ORIGIN_Hometile_2000x500_en_WW.jpg/a8eb527b-08a0-4286-ad3d-efcd3e39d494/original.jpg">
+      <div class="card_details">
+        <h1 class="h1">Apex Legends™</h1>
+      </div>
+    </div>
+    
+    <div class="card" onclick="openTab(event, 'game_info_sea')">
+      <img class="card_img" src="https://data3.origin.com/asset/content/dam/originx/web/app/games/sea-of-solitude/sea-of-solitude/SOSPO_ORIGIN_Hometile_2000x500_en_WW.jpg/f6e59c96-61b8-4918-98e5-ee534f62930c/original.jpg">
+      <div class="card_details">
+        <h1 class="h1">Sea of Solitude</h1>
+      </div>
+    </div>
+    
+    <div class="card" onclick="openTab(event, 'game_info_assasins')">
+      <img class="card_img" src="https://data4.origin.com/asset/content/dam/originx/web/app/games/assassins-creed/assassins-creed-odyssey/ACD_hometile_2000x500_en_WW.jpg/c11a9eaf-2383-42a8-aa8c-abfc870c9762/original.jpg">
+      <div class="card_details">
+        <h1 class="h1">Assassin's Creed® Одиссея</h1>
+      </div>
+    </div>
+        
+    <div class="card" onclick="openTab(event, 'game_info_valorant')">
+      <img class="card_img" src="https://sm.ign.com/ign_ru/screenshot/default/valorant_4yzh.jpg">
+      <div class="card_details">
+        <h1 class="h1">Valorant</h1>
+      </div>
+    </div>
+            
+    <div class="card" onclick="openTab(event, 'game_info_csgo')">
+      <img class="card_img" src="https://www.ecopetit.cat/wpic/mpic/212-2120981_counter-strike-global-offensive.jpg">
+      <div class="card_details">
+        <h1 class="h1">Counter Strike: Global Offensive</h1>
+      </div>
+    </div>
+                
+    <div class="card" onclick="openTab(event, 'game_info_gta5')">
+      <img class="card_img" src="https://gamefarm.ru/wp-content/uploads/2018/04/GTA-5.jpg">
+      <div class="card_details">
+        <h1 class="h1">Grand Theft Auto V</h1>
+      </div>
+    </div>
+                
+    <div class="card" onclick="openTab(event, 'game_info_fortnite')">
+      <img class="card_img" src="https://cdn02.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_download_software_1/H2x1_NSwitchDS_Fortnite_Chapter2_Season2.jpg">
+      <div class="card_details">
+        <h1 class="h1">Fortnite</h1>
+      </div>
+    </div>
+        
+    <div class="card" onclick="openTab(event, 'game_info_minecraft')">
+      <img class="card_img" src="https://cdn02.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_Minecraft.jpg">
+      <div class="card_details">
+        <h1 class="h1">Minecraft</h1>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<div id="news" class="tabcontent" style="padding: 0px 12px;">
+  <h3>Новинки 2020 года</h3>
+  <p>Здесь контент - карточки с играми</p>
+  
+  <div class="grid">
+    
+    <div class="card" onclick="openTab(event, 'game_info_aotennis2')">
+      <img class="card_img" src="https://data2.origin.com/asset/content/dam/originx/web/app/games/ao-tennis/ao-tennis-2/Home_Tile_2000x500.jpg/362d331c-f7fa-4c40-a284-9b7a46c2f5f3/original.jpg">
+      <div class="card_details">
+        <h1 class="h1">AO Tennis 2</h1>
+      </div>
+    </div>
+    
+    <div class="card" onclick="openTab(event, 'game_info_warhammer')">
+      <img class="card_img" src="https://data3.origin.com/asset/content/dam/originx/web/app/games/warhammer/warhammer-40000-mechanicus/gdp/1081243-standard-edition_hometile_2000x500_en_WW.jpg/6515b69f-3a9b-4c1e-8750-880b5fea5463/original.jpg">
+      <div class="card_details">
+        <h1 class="h1">Warhammer 40,000: Mechanicus</h1>
+      </div>
+    </div>
+    
+    <div class="card" onclick="openTab(event, 'game_info_darkwood')">
+      <img class="card_img" src="https://data3.origin.com/asset/content/dam/originx/web/app/games/darkwood/darkwood/gdp/darkwood_descriptor_hometile_2000x500_en_WW.jpg/202f3d39-1aa2-4ecd-8b5f-8adc1021297d/original.jpg">
+      <div class="card_details">
+        <h1 class="h1">Darkwood</h1>
+      </div>
+    </div>
+    
+    <div class="card" onclick="openTab(event, 'game_info_capsized')">
+      <img class="card_img" src="https://data4.origin.com/asset/content/dam/originx/web/app/games/capsized/capsized/Capsized_hometile_2000x500_en_WW.jpg/f36a4332-5c30-42b3-bd43-ef3361f8f558/original.jpg">
+      <div class="card_details">
+        <h1 class="h1">Capsized</h1>
+      </div>
+    </div>
+    
+    <div class="card" onclick="openTab(event, 'game_info_farmersdynasty')">
+      <img class="card_img" src="https://data3.origin.com/asset/content/dam/originx/web/app/games/farmers-dynasty/farmers-dynasty/Farmers_Dynasty_hometile_2000x500_en_WW.jpg/2610c2a5-a0fb-4bb6-9dbd-e91a29302032/original.jpg">
+      <div class="card_details">
+        <h1 class="h1">Farmer's Dynasty</h1>
+      </div>
+    </div>
+    
+     <div class="card" onclick="openTab(event, 'game_info_mablethewood')">
+      <img class="card_img" src="https://data3.origin.com/asset/content/dam/originx/web/app/games/mable-and-the-wood/mable-and-the-wood/gdp/1084285-standard-edition_hometile_2000x500_en_WW.jpg/f4c231b6-b449-4ef9-b1c4-92abba7932ba/original.jpg">
+      <div class="card_details">
+        <h1 class="h1">Mable & The Wood</h1>
+      </div>
+    </div>
+    
+    <div class="card" onclick="openTab(event, 'game_info_wreckfest')">
+      <img class="card_img" src="https://data1.origin.com/asset/content/dam/originx/web/app/games/wreckfest/wreckfest/gdp/1085137-standard-edition_hometile_2000x500_en_WW.jpg/39360c77-5357-4419-a5e1-cec8abcf27a6/original.jpg">
+      <div class="card_details">
+        <h1 class="h1">Wreckfest</h1>
+      </div>
+    </div>
+    
+    <div class="card" onclick="openTab(event, 'game_info_superhot')">
+      <img class="card_img" src="https://data4.origin.com/asset/content/dam/originx/web/app/games/superhot/superhot/191219_SUPERHOT_hometile_2000x500_en_WW.jpg/33ad77af-9c77-43e9-9226-ef2af5a635b2/original.jpg">
+      <div class="card_details">
+        <h1 class="h1">SUPERHOT</h1>
+      </div>
+    </div>
+    
+    <div class="card" onclick="openTab(event, 'game_info_fortheking')">
+      <img class="card_img" src="https://data1.origin.com/asset/content/dam/originx/web/app/games/for-the-king/for-the-king/gdp/fortheking_hex362f64_hometile_2000x500_en_WW.jpg/b35ae14e-0910-4651-b186-64f7576c0abd/original.jpg">
+      <div class="card_details">
+        <h1 class="h1">For the King</h1>
+      </div>
+    </div>
+    
+    <div class="card" onclick="openTab(event, 'game_info_littlemisfortune')">
+      <img class="card_img" src="https://data4.origin.com/asset/content/dam/originx/web/app/games/little-misfortune/little-misfortune/little-misfortune_hometile_2000x500_en_WW.jpg/9c52c592-4302-4da5-a1da-2dc259adfec1/original.jpg">
+      <div class="card_details">
+        <h1 class="h1">Little Misfortune</h1>
+      </div>
+    </div>
+    
+    <div class="card" onclick="openTab(event, 'game_info_tacoma')">
+      <img class="card_img" src="https://data2.origin.com/asset/content/dam/originx/web/app/games/tacoma/tacoma/Tacoma_hometile_2000x500_en_WW.jpg/00042df2-8f23-4cb7-a9e8-3ecd05c0c248/original.jpg">
+      <div class="card_details">
+        <h1 class="h1">Tacoma</h1>
+      </div>
+    </div>
+    
+    <div class="card" onclick="openTab(event, 'game_info_sparklite')">
+      <img class="card_img" src="https://data2.origin.com/asset/content/dam/originx/web/app/games/sparklite/sparklite/Sparklite_Hometile_2000x500_en_WW.jpg/e78f241a-a65b-429d-a1cb-1e78894abcd9/original.jpg">
+      <div class="card_details">
+        <h1 class="h1">Sparklite</h1>
+      </div>
+    </div>
+    
+    <div class="card" onclick="openTab(event, 'game_info_deadcells')">
+      <img class="card_img" src="https://data1.origin.com/asset/content/dam/originx/web/app/games/dead-cells/dead-cells/gdp/deadCells-standard-edition_hometile_2000x500_en_WW_v2.jpg/f19aae6a-e4cb-4894-9ecb-e4a137a38512/original.jpg">
+      <div class="card_details">
+        <h1 class="h1">Dead Cells</h1>
+      </div>
+    </div>
+    
+    <div class="card" onclick="openTab(event, 'game_info_homebehind')">
+      <img class="card_img" src="https://data3.origin.com/asset/content/dam/originx/web/app/games/home-behind/home-behind/homebehind_hometile_1000x250_en_WW.jpg/ca1acae6-6c45-4f26-9f7c-3f50ecb28375/original.jpg">
+      <div class="card_details">
+        <h1 class="h1">Home Behind</h1>
+      </div>
+    </div>
+    
+    <div class="card" onclick="openTab(event, 'game_info_shio')">
+      <img class="card_img" src="https://data4.origin.com/asset/content/dam/originx/web/app/games/shio/shio/Shio_hometile_2000x500_en_WW.jpg/61824805-17d4-4874-ac6c-bff302598ae3/original.jpg">
+      <div class="card_details">
+        <h1 class="h1">Shio</h1>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<div id="aboutus" class="tabcontent" style="padding: 0px 12px;">
+  <h3>О сайте</h3>
+  <p>Здесь контент - информация о сайте</p>
+</div>
+  
+<iframe id="game_info_jedai" class="tabcontent" src="game_jedai.html">
+    Ваш браузер не поддерживает плавающие фреймы!
+</iframe>  
+<iframe id="game_info_anthem" class="tabcontent" src="game_anthem.html">
+    Ваш браузер не поддерживает плавающие фреймы!
+</iframe>
+<iframe id="game_info_bf5" class="tabcontent" src="game_bf5.html">
+    Ваш браузер не поддерживает плавающие фреймы!
+</iframe>
+<iframe id="game_info_sims4" class="tabcontent" src="game_sims4.html">
+    Ваш браузер не поддерживает плавающие фреймы!
+</iframe>
+<iframe id="game_info_nfs" class="tabcontent" src="game_nfs.html">
+    Ваш браузер не поддерживает плавающие фреймы!
+</iframe>
+<iframe id="game_info_titanfall2" class="tabcontent" src="game_titanfall2.html">
+    Ваш браузер не поддерживает плавающие фреймы!
+</iframe>
+<iframe id="game_info_deadspace" class="tabcontent" src="game_deadspace.html">
+    Ваш браузер не поддерживает плавающие фреймы!
+</iframe>
+<iframe id="game_info_apex" class="tabcontent" src="game_apex.html">
+    Ваш браузер не поддерживает плавающие фреймы!
+</iframe>
+<iframe id="game_info_sea" class="tabcontent" src="game_sea.html">
+    Ваш браузер не поддерживает плавающие фреймы!
+</iframe>
+<iframe id="game_info_assasins" class="tabcontent" src="game_assasins.html">
+    Ваш браузер не поддерживает плавающие фреймы!
+</iframe>
+<iframe id="game_info_valorant" class="tabcontent" src="game_valorant.html">
+    Ваш браузер не поддерживает плавающие фреймы!
+</iframe>
+<iframe id="game_info_csgo" class="tabcontent" src="game_csgo.html">
+    Ваш браузер не поддерживает плавающие фреймы!
+</iframe>
+<iframe id="game_info_gta5" class="tabcontent" src="game_gta5.html">
+    Ваш браузер не поддерживает плавающие фреймы!
+</iframe>
+<iframe id="game_info_fortnite" class="tabcontent" src="game_fortnite.html">
+    Ваш браузер не поддерживает плавающие фреймы!
+</iframe>
+<iframe id="game_info_minecraft" class="tabcontent" src="game_minecraft.html">
+    Ваш браузер не поддерживает плавающие фреймы!
+</iframe>
+<iframe id="game_info_aotennis2" class="tabcontent" src="game_aotennis2.html">
+    Ваш браузер не поддерживает плавающие фреймы!
+</iframe>  
+<iframe id="game_info_warhammer" class="tabcontent" src="game_warhammer.html">
+    Ваш браузер не поддерживает плавающие фреймы!
+</iframe>  
+<iframe id="game_info_darkwood" class="tabcontent" src="game_darkwood.html">
+    Ваш браузер не поддерживает плавающие фреймы!
+</iframe>  
+<iframe id="game_info_capsized" class="tabcontent" src="game_capsized.html">
+    Ваш браузер не поддерживает плавающие фреймы!
+</iframe>  
+<iframe id="game_info_farmersdynasty" class="tabcontent" src="game_farmersdynasty.html">
+    Ваш браузер не поддерживает плавающие фреймы!
+</iframe>  
+<iframe id="game_info_mablethewood" class="tabcontent" src="game_mablethewood.html">
+    Ваш браузер не поддерживает плавающие фреймы!
+</iframe>  
+<iframe id="game_info_wreckfest" class="tabcontent" src="game_wreckfest.html">
+    Ваш браузер не поддерживает плавающие фреймы!
+</iframe>  
+<iframe id="game_info_superhot" class="tabcontent" src="game_superhot.html">
+    Ваш браузер не поддерживает плавающие фреймы!
+</iframe>  
+<iframe id="game_info_fortheking" class="tabcontent" src="game_fortheking.html">
+    Ваш браузер не поддерживает плавающие фреймы!
+</iframe>  
+<iframe id="game_info_littlemisfortune" class="tabcontent" src="game_littlemisfortune.html">
+    Ваш браузер не поддерживает плавающие фреймы!
+</iframe>  
+<iframe id="game_info_tacoma" class="tabcontent" src="game_tacoma.html">
+    Ваш браузер не поддерживает плавающие фреймы!
+</iframe>  
+<iframe id="game_info_sparklite" class="tabcontent" src="game_sparklite.html">
+    Ваш браузер не поддерживает плавающие фреймы!
+</iframe>  
+<iframe id="game_info_deadcells" class="tabcontent" src="game_deadcells.html">
+    Ваш браузер не поддерживает плавающие фреймы!
+</iframe>  
+<iframe id="game_info_homebehind" class="tabcontent" src="game_homebehind.html">
+    Ваш браузер не поддерживает плавающие фреймы!
+</iframe>  
+<iframe id="game_info_shio" class="tabcontent" src="game_shio.html">
+    Ваш браузер не поддерживает плавающие фреймы!
+</iframe>
+
+<script>
+function openTab(evt, openName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(openName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+
+body{
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  display: block;
+  background-color: #edf1f2;
+  font-family: Open Sans,sans-serif;
+}
+
+.top_header {
+  background-color:rgb(30, 38, 44);
+  height:450px;
+  min-height:450px;
+  position:relative;
+  width:100%;
+  margin: 0;
+  padding: 0;
+}
+
+.top_header_image {
+  background-image:url('https://data4.origin.com/asset/content/dam/originx/web/app/games/superhot/superhot/191219_SUPERHOT_gdp-bg_en_WW.jpg/306ccb40-8c7e-4a95-97ae-8086ec246dc4/original.jpg');
+  background-position-x:35%;
+  background-position-y:0%;
+  background-size:cover;
+  display:block;
+  height:450px;
+  position:absolute;
+  width:100%;
+}
+
+.buttons {
+  background-color: #1e262c;
+  height: 70px;
+  width: 100%;
+}
+
+.button {
+  background-color: inherit;
+  color: #e1e2e4;
+  border: none;
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+  height: 64px; 
+  padding: 0px 20px;
+}
+
+.button:hover {
+  background-color: #2e363d;
+}
+
+.card {
+  border-radius: 8px;
+  background-color: white;
+  margin: 22px;
+  padding: 8px 22px;
+  border: 1px solid #dfe4e5;
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.05);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.05);
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.05);
+}
+
+.column {
+  column-count: 3;
+}
+
+h3 {
+  padding: 0px 22px;
+}
+
+.screens_grid {
+  display: -moz-grid;
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 315px);
+  grid-gap: 15px;  
+  margin: 0px 22px;
+}
+
+.screen {
+  width: 314.65px;
+  height: 176.99px;
+  -moz-background-size: 100%;
+  -webkit-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  empty-cells: hide;
+  font-family: Open Sans,sans-serif;
+}
+
+th {
+  padding: 12px 8px;
+}
+
+td {
+  padding: 10px 6px;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 0 20px;
+  margin-bottom: 10px;
+  background: #E9EFF6;
+  line-height: 40px;
+  border-width: 0;
+  border-radius: 20px;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  padding: 0 20px;
+  margin-bottom: 10px;
+  background: #E9EFF6;
+  line-height: 20px;
+  border-width: 0;
+  border-radius: 20px;
+}
+
+input[type="submit"] {
+  margin-top: 30px;
+  background: #f69a73;
+  border-bottom: 4px solid #d87d56;
+  color: white;
+  font-size: 14px;
+}
+
+#overlay_image {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  position: absolute;
+  display: none;
+  z-index: 100;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+#overlay_image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+</style>
+<body>
+
+<div id="overlay_image" onclick="close_overlay()"></div>
+
+<section class="top_header">
+  <div class="top_header_image"></div>
+</section>
+
+<div class="buttons">
+	<a href="#screens"><button class="button">Скриншоты и видеоролики</button></a>
+	<a href="#info"><button class="button">Описание</button></a>
+	<a href="#system"><button class="button">Системные требования</button></a>
+	<a href="#feedback"><button class="button">Обратная связь</button></a>
+	<a href="https://www.origin.com/rus/ru-ru/store/superhot/superhot" target="_blank"><button class="button">Получить игру</button></a>
+</div>
+
+<div>
+
+<div id="screens">
+<h3> Скриншоты и видеоролики </h3>
+<div class="screens_grid">
+  <img onclick="open_overlay(event)" class="screen" src="https://data2.origin.com/asset/content/dam/originx/web/app/games/superhot/superhot/screenshots/1069640_screenhi_1920x1080_en_US_01.jpg/ea6ce042-29d0-4338-805f-97eca1305879/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data3.origin.com/asset/content/dam/originx/web/app/games/superhot/superhot/screenshots/1069640_screenhi_1920x1080_en_US_02.jpg/51428185-ba79-448e-9cb5-b43f2a6fbebb/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data4.origin.com/asset/content/dam/originx/web/app/games/superhot/superhot/screenshots/1069640_screenhi_1920x1080_en_US_03.jpg/d3ad98a5-f865-471d-a520-aee48e98b2df/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data1.origin.com/asset/content/dam/originx/web/app/games/superhot/superhot/screenshots/1069640_screenhi_1920x1080_en_US_04.jpg/4a5fd380-4aef-4343-8000-99c37e2e48b2/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data2.origin.com/asset/content/dam/originx/web/app/games/superhot/superhot/screenshots/1069640_screenhi_1920x1080_en_US_05.jpg/7d5fb53e-ced2-47f0-927e-62f7bbf0e551/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data3.origin.com/asset/content/dam/originx/web/app/games/superhot/superhot/screenshots/1069640_screenhi_1920x1080_en_US_06.jpg/5da98393-d0f4-43ee-9e08-a6e00abc0153/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data4.origin.com/asset/content/dam/originx/web/app/games/superhot/superhot/screenshots/1069640_screenhi_1920x1080_en_US_07.jpg/af9c2945-a520-4731-aeaa-7bcbb24eec9a/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data1.origin.com/asset/content/dam/originx/web/app/games/superhot/superhot/screenshots/1069640_screenhi_1920x1080_en_US_08.jpg/750c2853-8333-4a96-8c32-631cfba2f538/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data2.origin.com/asset/content/dam/originx/web/app/games/superhot/superhot/screenshots/1069640_screenhi_1920x1080_en_US_09.jpg/e89737e7-4dcd-4e62-83a6-ceedc49f5bcf/original.jpg"/>
+</div>
+</div>
+
+<div id="info">
+<h3> Описание </h3>
+<div class="card column">
+  <p>
+  SUPERHOT&nbsp;— это шутер от&nbsp;первого лица, где время движется только вместе с&nbsp;тобой. Здесь не&nbsp;будет восполняемой полоски здоровья. Не&nbsp;будет стратегически разбросанных боеприпасов. Только ты&nbsp;— один против всех, с&nbsp;голыми руками. Выхватывай оружие у&nbsp;падающих врагов, стреляй, руби и&nbsp;уворачивайся от&nbsp;пуль, как Нео.<br><br>«Практически идеальная игра»,&nbsp;— Destructoid <br>
+  9/10<br><br>
+  «Самый инновационный шутер за&nbsp;многие годы»,&nbsp;— Jimquisition<br>
+  9,5/10<br><br>
+  «Ничего подобного раньше не&nbsp;видел»,&nbsp;— Polygon<br>
+  9/10<br><br>
+  «Может встать в&nbsp;один ряд с&nbsp;System Shock и&nbsp;Half-Life»,&nbsp;— The Daily Dot<br>
+  5/5<br><br>
+  «SUPERHOT&nbsp;— САМЫЙ ИННОВАЦИОННЫЙ ШУТЕР ЗА&nbsp;МНОГИЕ ГОДЫ!»&nbsp;— Washington Post<br><br>
+  SUPERHOT стирает границы между вдумчивой стратегией и&nbsp;безудержным безумием: это шутер от&nbsp;первого лица, где время движется только вместе с&nbsp;тобой. Здесь не&nbsp;будет восполняемой полоски здоровья. Не&nbsp;будет удачно разбросанных боеприпасов. Только ты&nbsp;— один против всех, с&nbsp;голыми руками. Выхватывай оружие у&nbsp;падающих врагов, стреляй, руби и&nbsp;уворачивайся от&nbsp;пуль, как Нео.<br><br>
+  Уникальный стиль графики SUPERHOT&nbsp;— долгожданный прорыв в&nbsp;жанре шутеров. Ее спартанская минималистичность помогает сосредоточиться на&nbsp;главном&nbsp;— плавности геймплея и&nbsp;кинематографичной красоте боя.
+  </p>
+</div>
+</div>
+
+<div id="system">
+<h3> Системные требования </h3>
+<div class="card">
+  <table>
+    <tr>
+      <th></th>
+      <th>МИНИМАЛЬНЫЕ СИСТЕМНЫЕ ТРЕБОВАНИЯ</th>
+      <th>РЕКОМЕНДУЕМЫЕ СИСТЕМНЫЕ ТРЕБОВАНИЯ</th>
+    </tr>
+    <tr>
+      <td>OC</td>
+      <td>Windows 7</td>
+      <td>Windows 7</td>
+    </tr>
+    <tr>
+      <td>Процессор</td>
+      <td>Intel Core2Quad Q6600 с частотой 2,4 ГГц</td>
+      <td>Intel Core I5-4440 с частотой 3,1 ГГц</td>
+    </tr>
+    <tr>
+      <td>ОЗУ</td>
+      <td>4 Гб</td>
+      <td>8 Гб</td>
+    </tr>
+    <tr>
+      <td>Видеокарта</td>
+      <td>GeForce GTX 650 с 1024 Мб видеопамяти</td>
+      <td>GeForce GTX 660 с 2048 Мб видеопамяти</td>
+    </tr>
+    <tr>
+      <td>Жесткий диск</td>
+      <td>4 Гб</td>
+      <td>4 Гб</td>
+    </tr>
+	</table>
+</div>
+</div>
+
+<div id="feedback">
+<h3> Обратная связь </h3>
+<div class="card centered">
+  <form>
+    <h4> Написать нам </h4>
+	<input type="text" placeholder="Ваше имя"/>
+	<input type="email" placeholder="Email"/>
+	<textarea placeholder="Сообщение..." rows="3"></textarea>
+	<input style="cursor: pointer;" type="submit" value="Отправить"/>
+  </form>  
+</div>
+</div>
+
+</div>
+
+<script>
+function close_overlay() {
+  document.getElementById('overlay_image').style.display = "none";
+  
+  window.onscroll = function() {};
+}
+function open_overlay(evt) {
+  document.getElementById('overlay_image').style.display = "block";
+  document.getElementById('overlay_image').innerHTML = '<img src='+evt.currentTarget.src+' width="70%"/>';
+  
+  window.scrollTo(0, 0); 
+  scrollTop = window.pageYOffset || document.documentElement.scrollTop; 
+  scrollLeft = window.pageXOffset || document.documentElement.scrollLeft, 
+  window.onscroll = function() { 
+    window.scrollTo(scrollLeft, scrollTop); 
+  }; 
+}
+</script>
+
+</body>
+</html>

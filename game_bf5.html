@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+
+body{
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  display: block;
+  background-color: #edf1f2;
+  font-family: Open Sans,sans-serif;
+}
+
+.top_header {
+  background-color:rgb(30, 38, 44);
+  height:450px;
+  min-height:450px;
+  position:relative;
+  width:100%;
+  margin: 0;
+  padding: 0;
+}
+
+.top_header_image {
+  background-image:url(https://data1.origin.com/asset/content/dam/originx/web/app/games/battlefield/battlefield-v/battlefieldv_standard-edition_gdp_header_2400x600_en_US.jpg/158492ec-17ce-4a6e-a85e-5b8447fc2bd8/original.jpg);
+  background-position-x:35%;
+  background-position-y:0%;
+  background-size:cover;
+  display:block;
+  height:450px;
+  position:absolute;
+  width:100%;
+}
+
+.buttons {
+  background-color: #1e262c;
+  height: 70px;
+  width: 100%;
+}
+
+.button {
+  background-color: inherit;
+  color: #e1e2e4;
+  border: none;
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+  height: 64px; 
+  padding: 0px 20px;
+}
+
+.button:hover {
+  background-color: #2e363d;
+}
+
+.card {
+  border-radius: 8px;
+  background-color: white;
+  margin: 22px;
+  padding: 8px 22px;
+  border: 1px solid #dfe4e5;
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.05);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.05);
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.05);
+}
+
+.column {
+  column-count: 3;
+}
+
+h3 {
+  padding: 0px 22px;
+}
+
+.screens_grid {
+  display: -moz-grid;
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 315px);
+  grid-gap: 15px;  
+  margin: 0px 22px;
+}
+
+.screen {
+  width: 314.65px;
+  height: 176.99px;
+  -moz-background-size: 100%;
+  -webkit-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  empty-cells: hide;
+  font-family: Open Sans,sans-serif;
+}
+
+th {
+  padding: 12px 8px;
+}
+
+td {
+  padding: 10px 6px;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 0 20px;
+  margin-bottom: 10px;
+  background: #E9EFF6;
+  line-height: 40px;
+  border-width: 0;
+  border-radius: 20px;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  padding: 0 20px;
+  margin-bottom: 10px;
+  background: #E9EFF6;
+  line-height: 20px;
+  border-width: 0;
+  border-radius: 20px;
+}
+
+input[type="submit"] {
+  margin-top: 30px;
+  background: #f69a73;
+  border-bottom: 4px solid #d87d56;
+  color: white;
+  font-size: 14px;
+}
+
+#overlay_image {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  position: absolute;
+  display: none;
+  z-index: 100;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+#overlay_image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+</style>
+<body>
+
+<div id="overlay_image" onclick="close_overlay()"></div>
+
+<section class="top_header">
+  <div class="top_header_image"></div>
+</section>
+
+<div class="buttons">
+	<a href="#screens"><button class="button">Скриншоты и видеоролики</button></a>
+	<a href="#info"><button class="button">Описание</button></a>
+	<a href="#system"><button class="button">Системные требования</button></a>
+	<a href="#feedback"><button class="button">Обратная связь</button></a>
+	<a href="https://www.origin.com/rus/ru-ru/store/battlefield/battlefield-v" target="_blank"><button class="button">Получить игру</button></a>
+</div>
+
+<div>
+
+<div id="screens">
+<h3> Скриншоты и видеоролики </h3>
+<div class="screens_grid">
+  <iframe width="314.65px" height="176.99px" src="https://www.youtube.com/embed/21xR910tO1o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe width="314.65px" height="176.99px" src="https://www.youtube.com/embed/hCoSBEwQJC4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe width="314.65px" height="176.99px" src="https://www.youtube.com/embed/1fB93m85CuQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <img onclick="open_overlay(event)" class="screen" src="https://data3.origin.com/asset/content/dam/originx/web/app/games/battlefield/battlefield-v/ch6/BFV_Chapter6_M1A1Bazooka_1920x1080.jpg/6651a1e0-ed0f-45ad-a78f-0adbb0ff81af/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data4.origin.com/asset/content/dam/originx/web/app/games/battlefield/battlefield-v/ch6/BFV_Chapter6_JungleVista_1_1920x1080.jpg/bfc65e7f-dad6-49ca-94af-54bfc7111323/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data1.origin.com/asset/content/dam/originx/web/app/games/battlefield/battlefield-v/ch6/BFV_Chapter6_EliteSteve_1920x1080.jpg/6ce5936c-87e4-46a0-a69b-85169a60dada/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data2.origin.com/asset/content/dam/originx/web/app/games/battlefield/battlefield-v/ch6/BFV_Chapter6_JungleVista_2_1920x1080.jpg/f8335231-cdd5-4a27-b0dc-17ae417d73fe/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data3.origin.com/asset/content/dam/originx/web/app/games/battlefield/battlefield-v/ch6/BFV_Chapter6_Type11LMG_1920x1080.jpg/55d4b8dc-0c1b-493a-8ce5-f3c55ea548de/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data4.origin.com/asset/content/dam/originx/web/app/games/battlefield/battlefield-v/ch6/BFV_Chapter6_M2Carbine_1920x1080.jpg/18ede59f-5497-46b9-a919-77a4cce6af22/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data1.origin.com/asset/content/dam/originx/web/app/games/battlefield/battlefield-v/ch6/BFV_Chapter6_JungleAction_1920x1080.jpg/5ba93d26-cb76-4c1a-aaeb-94f1655251dc/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data2.origin.com/asset/content/dam/originx/web/app/games/battlefield/battlefield-v/ch6/BFV_Chapter6_TrailerThumb_1920x1080.jpg/cc347fb1-0923-42fe-b2f1-7fdc55b6a0a3/original.jpg"/>
+  <img onclick="open_overlay(event)" class="screen" src="https://data3.origin.com/asset/content/dam/originx/web/app/games/battlefield/battlefield-v/ch6/BFV_Chapter6_EliteAkira_1920x1080.jpg/7b1b12ed-5194-4aae-a91e-6595f4396450/original.jpg"/>
+</div>
+</div>
+
+<div id="info">
+<h3> Описание </h3>
+<div class="card column">
+  <p>Участвуйте в крупнейшем военном конфликте в истории в Battlefield™ V. Серия возвращается к своим истокам и показывает Вторую мировую войну как никогда прежде. Сражайтесь в таких режимах, как Операции и Совместные бои, или переживите человеческие трагедии в Военных историях. Примите участие в самых непредсказуемых битвах и насладитесь самым увлекательным Battlefield в истории. Игра теперь также включает «Огненный шторм» — «королевскую битву» в стиле Battlefield.</p>
+  
+  <ul>
+    <li>«Огненный шторм» — это «королевская битва» в стиле Battlefield. Сражайтесь на самой большой карте в истории серии, используя эпическое оружие и технику. Добывайте припасы и сражайтесь в огненном кольце, чтобы стать последним выжившим отрядом.</li>
+    <li>Вторая мировая, какой вы её еще не видели - станьте свидетелем и участником неожиданных и при этом ключевых моментов войны. Battlefield возвращается к истокам.</li>
+    <li>Сетевые сражения на 64 игрока в хаосе войны - возглавьте свой отряд в напряженном многопользовательском сражении в Больших операциях, играйте в классические режимы, такие как Захват, или объединитесь с друзьями в Совместных боях.</li>
+	<li>Самая увлекательная игра в серии Battlefield. Маневрируйте на поле боя, пользуясь новыми возможностями бойцов по передвижению, укреплениями и мобильными средствами разрушения.</li>
+	<li>Ранее неизвестные Военные истории - переживите человеческие трагедии в Военных историях. Вы можете оказаться на склонах норвежских гор, сражаясь за контроль над путями поставок ядерного оружия, биться плечом к плечу с французскими колониальными войсками или отправиться в тыл врага в Северной Африке, чтобы сеять там хаос вместе с бандой сорвиголов.</li>
+	<li>Сезоны войны - новый контент постоянно будет переносить вас и ваш отряд в разные ключевые места Второй мировой - там вас ждут новые поля сражений и новое снаряжение.</li>
+  </ul>
+  
+</div>
+</div>
+
+<div id="system">
+<h3> Системные требования </h3>
+<div class="card">
+  <table>
+    <tr>
+      <th></th>
+      <th>МИНИМАЛЬНЫЕ СИСТЕМНЫЕ ТРЕБОВАНИЯ</th>
+      <th>РЕКОМЕНДУЕМЫЕ СИСТЕМНЫЕ ТРЕБОВАНИЯ</th>
+    </tr>
+    <tr>
+      <td>OC</td>
+      <td>64-разрядная версия Windows 7/8.1/10</td>
+      <td>64-разрядная версия Windows 7/8.1/10</td>
+    </tr>
+    <tr>
+      <td>Процессор (AMD)</td>
+      <td>AMD FX-8350</td>
+      <td>AMD Ryzen 3 1300X</td>
+    </tr>
+    <tr>
+      <td>Процессор (Intel)</td>
+      <td>Intel Core i5 6600K</td>
+      <td>Intel Core i7 4790 или аналогичный</td>
+    </tr>
+    <tr>
+      <td>ОЗУ</td>
+      <td>8 ГБ</td>
+      <td>12 ГБ</td>
+    </tr>
+    <tr>
+      <td>Видеокарта (AMD)</td>
+      <td>AMD RX 560 / HD 7850 2 Гб</td>
+      <td>AMD RX 580</td>
+    </tr>
+    <tr>
+      <td>Видеокарта (NVIDIA)</td>
+      <td>NVIDIA GTX 1050 / NVIDIA GTX 660 2 ГБ</td>
+      <td>NVIDIA GTX 1060</td>
+    </tr>
+    <tr>
+      <td>DirectX</td>
+      <td>совместимая с DirectX 11 видеокарта или ее эквивалент</td>
+      <td>совместимая с DirectX 11 видеокарта или ее эквивалент</td>
+    </tr>
+    <tr>
+      <td>Жесткий диск</td>
+      <td>50 ГБ</td>
+      <td>50 ГБ</td>
+    </tr>
+	</table>
+</div>
+</div>
+
+<div id="feedback">
+<h3> Обратная связь </h3>
+<div class="card centered">
+  <form>
+    <h4> Написать нам </h4>
+	<input type="text" placeholder="Ваше имя"/>
+	<input type="email" placeholder="Email"/>
+	<textarea placeholder="Сообщение..." rows="3"></textarea>
+	<input style="cursor: pointer;" type="submit" value="Отправить"/>
+  </form>  
+</div>
+</div>
+
+
+</div>
+
+<script>
+function close_overlay() {
+  document.getElementById('overlay_image').style.display = "none";
+  
+  window.onscroll = function() {};
+}
+function open_overlay(evt) {
+  document.getElementById('overlay_image').style.display = "block";
+  document.getElementById('overlay_image').innerHTML = '<img src='+evt.currentTarget.src+' width="70%"/>';
+  
+  window.scrollTo(0, 0); 
+  scrollTop = window.pageYOffset || document.documentElement.scrollTop; 
+  scrollLeft = window.pageXOffset || document.documentElement.scrollLeft, 
+  window.onscroll = function() { 
+    window.scrollTo(scrollLeft, scrollTop); 
+  }; 
+}
+</script>
+
+</body>
+</html>

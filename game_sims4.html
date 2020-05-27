@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+
+body{
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  display: block;
+  background-color: #edf1f2;
+  font-family: Open Sans,sans-serif;
+}
+
+.top_header {
+  background-color:rgb(30, 38, 44);
+  height:450px;
+  min-height:450px;
+  position:relative;
+  width:100%;
+  margin: 0;
+  padding: 0;
+}
+
+.top_header_image {
+  background-image:url(https://data2.origin.com/asset/content/dam/originx/web/app/games/the-sims/the-sims-4/expansion-packs/EP9-Eco-Lifestyle/originassets/SIMS4EP9_ORIGIN_GDP_BG_4800x1200_en_WW.jpg/e9ea01d7-52d0-487d-83ce-a446181407f7/original.jpg);
+  background-position-x:35%;
+  background-position-y:0%;
+  background-size:cover;
+  display:block;
+  height:450px;
+  position:absolute;
+  width:100%;
+}
+
+.buttons {
+  background-color: #1e262c;
+  height: 70px;
+  width: 100%;
+}
+
+.button {
+  background-color: inherit;
+  color: #e1e2e4;
+  border: none;
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+  height: 64px; 
+  padding: 0px 20px;
+}
+
+.button:hover {
+  background-color: #2e363d;
+}
+
+.card {
+  border-radius: 8px;
+  background-color: white;
+  margin: 22px;
+  padding: 8px 22px;
+  border: 1px solid #dfe4e5;
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.05);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.05);
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.05);
+}
+
+.column {
+  column-count: 3;
+}
+
+h3 {
+  padding: 0px 22px;
+}
+
+.screens_grid {
+  display: -moz-grid;
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 315px);
+  grid-gap: 15px;  
+  margin: 0px 22px;
+}
+
+.screen {
+  width: 314.65px;
+  height: 176.99px;
+  -moz-background-size: 100%;
+  -webkit-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  empty-cells: hide;
+  font-family: Open Sans,sans-serif;
+}
+
+th {
+  padding: 12px 8px;
+}
+
+td {
+  padding: 10px 6px;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 0 20px;
+  margin-bottom: 10px;
+  background: #E9EFF6;
+  line-height: 40px;
+  border-width: 0;
+  border-radius: 20px;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  padding: 0 20px;
+  margin-bottom: 10px;
+  background: #E9EFF6;
+  line-height: 20px;
+  border-width: 0;
+  border-radius: 20px;
+}
+
+input[type="submit"] {
+  margin-top: 30px;
+  background: #f69a73;
+  border-bottom: 4px solid #d87d56;
+  color: white;
+  font-size: 14px;
+}
+
+#overlay_image {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  position: absolute;
+  display: none;
+  z-index: 100;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+#overlay_image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+</style>
+<body>
+
+<div id="overlay_image" onclick="close_overlay()"></div>
+
+<section class="top_header">
+  <div class="top_header_image"></div>
+</section>
+
+<div class="buttons">
+	<a href="#screens"><button class="button">Скриншоты и видеоролики</button></a>
+	<a href="#info"><button class="button">Описание</button></a>
+	<a href="#system"><button class="button">Системные требования</button></a>
+	<a href="#feedback"><button class="button">Обратная связь</button></a>
+	<a href="https://www.origin.com/rus/ru-ru/store/the-sims/the-sims-4/" target="_blank"><button class="button">Получить игру</button></a>
+</div>
+
+<div>
+
+<div id="screens">
+<h3> Скриншоты и видеоролики </h3>
+<div class="screens_grid">
+  <iframe width="314.65px" height="176.99px" src="https://www.youtube.com/embed/DgbVgtvLoMg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe width="314.65px" height="176.99px" src="https://www.youtube.com/embed/LcB8QyWRk7g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe width="314.65px" height="176.99px" src="https://www.youtube.com/embed/Sxd63J3yJ8g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <img onclick="open_overlay(event)"  class="screen" src="https://data3.origin.com/asset/content/dam/originx/web/app/games/the-sims/the-sims-4/expansion-packs/EP9-Eco-Lifestyle/Screenshots/TS4_EP09_OFFICIAL_SCREENS_03_002_1080.png/0ceebb32-5026-4be2-a3a9-d4bdd791747d/original.png"/>
+  <img onclick="open_overlay(event)"  class="screen" src="https://data4.origin.com/asset/content/dam/originx/web/app/games/the-sims/the-sims-4/expansion-packs/EP9-Eco-Lifestyle/Screenshots/TS4_EP09_OFFICIAL_SCREENS_02_002_1080.png/a1472264-0f17-4d0c-b9dc-ca9814392246/original.png"/>
+  <img onclick="open_overlay(event)"  class="screen" src="https://data1.origin.com/asset/content/dam/originx/web/app/games/the-sims/the-sims-4/expansion-packs/EP9-Eco-Lifestyle/Screenshots/TS4_EP09_OFFICIAL_SCREENS_01_003_1080.png/d5d044b3-a106-448e-bda4-777ff2e68b83/original.png"/>
+  <img onclick="open_overlay(event)"  class="screen" src="https://data2.origin.com/asset/content/dam/originx/web/app/games/the-sims/the-sims-4/expansion-packs/EP9-Eco-Lifestyle/Screenshots/TS4_EP09_OFFICIAL_SCREENS_04_002_1080.png/7e07ae06-3b02-43db-86db-57085b7e8429/original.png"/>
+</div>
+</div>
+
+<div id="info">
+<h3> Описание </h3>
+<div class="card column">
+  <p>Оформите предзаказ! Ваши симы готовы сделать мир лучше? Примкните к сообществу производителей собственной продукции в «The Sims™ 4 Экологичная жизнь Дополнение»!* Вносите свой вклад в новом мире Эвергрин-Харбор. Помогайте соседям выбрать проект для коллективной работы, уменьшайте свой экослед и наблюдайте, как преображается ваш город. Вы удивитесь, узнав, что произойдет, если симы начнут устанавливать свои правила.</p>
+  
+
+</div>
+</div>
+
+<div id="system">
+<h3> Системные требования </h3>
+<div class="card">
+  <table>
+    <tr>
+      <th></th>
+      <th>МИНИМАЛЬНЫЕ СИСТЕМНЫЕ ТРЕБОВАНИЯ</th>
+      <th>РЕКОМЕНДУЕМЫЕ СИСТЕМНЫЕ ТРЕБОВАНИЯ</th>
+    </tr>
+    <tr>
+      <td>OC</td>
+      <td>64-разрядная версия Windows 7/8.1/10</td>
+      <td>64-разрядная версия Windows 7/8.1/10</td>
+    </tr>
+    <tr>
+      <td>Процессор (AMD)</td>
+      <td>AMD Athlon 64 Dual-Core 4000+</td>
+      <td>AMD Athlon X4</td>
+    </tr>
+    <tr>
+      <td>Процессор (Intel)</td>
+      <td>Intel Core 2 Duo 1,8 ГГц</td>
+      <td>Intel Core i5 или быстрее</td>
+    </tr>
+    <tr>
+      <td>ОЗУ</td>
+      <td>8 ГБ</td>
+      <td>12 ГБ</td>
+    </tr>
+    <tr>
+      <td>Видеокарта (AMD)</td>
+      <td>ATI Radeon X1300 или лучше</td>
+      <td>AMD RX 480</td>
+    </tr>
+    <tr>
+      <td>Видеокарта (NVIDIA)</td>
+      <td>NVIDIA GeForce 6600 или лучше</td>
+      <td>NVIDIA GTX 650 или лучше</td>
+    </tr>
+    <tr>
+      <td>DirectX</td>
+      <td>DirectX 9.0, 10 или 11</td>
+      <td>DirectX 9.0, 10 или 11</td>
+    </tr>
+    <tr>
+      <td>Жесткий диск</td>
+      <td>18 ГБ</td>
+      <td>18 ГБ</td>
+    </tr>
+	</table>
+</div>
+</div>
+
+<div id="feedback">
+<h3> Обратная связь </h3>
+<div class="card centered">
+  <form>
+    <h4> Написать нам </h4>
+	<input type="text" placeholder="Ваше имя"/>
+	<input type="email" placeholder="Email"/>
+	<textarea placeholder="Сообщение..." rows="3"></textarea>
+	<input style="cursor: pointer;" type="submit" value="Отправить"/>
+  </form>  
+</div>
+</div>
+
+</div>
+
+<script>
+function close_overlay() {
+  document.getElementById('overlay_image').style.display = "none";
+  
+  window.onscroll = function() {};
+}
+function open_overlay(evt) {
+  document.getElementById('overlay_image').style.display = "block";
+  document.getElementById('overlay_image').innerHTML = '<img src='+evt.currentTarget.src+' width="70%"/>';
+  
+  window.scrollTo(0, 0); 
+  scrollTop = window.pageYOffset || document.documentElement.scrollTop; 
+  scrollLeft = window.pageXOffset || document.documentElement.scrollLeft, 
+  window.onscroll = function() { 
+    window.scrollTo(scrollLeft, scrollTop); 
+  }; 
+}
+</script>
+
+</body>
+</html>
