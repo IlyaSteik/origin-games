@@ -204,3 +204,54 @@ body {font-family: "Lato", sans-serif; margin: 0; display: flex; border: 0; back
   text-rendering:optimizelegibility;
   width:242.715px;
 }
+
+.header_wrapper {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("https://data2.origin.com/content/dam/originx/web/app/programs/About/aboutorigin_3840x2160_SWB.jpg") no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+
+.header_wrapper :after {
+  background-image:linear-gradient(rgba(0, 0, 0, 0) 20%, rgba(20, 27, 32, 0.2) 60%, rgba(20, 27, 32, 0.4));
+  content:"";
+  position:absolute;
+  left:0px;
+  bottom:0px;
+  right:0px;
+  top:0px;
+  z-index: 1;
+}
+
+.header_wrapper h1 {
+  padding-left: 45px;
+  padding-right: 45px;
+  color: #fff;
+  text-shadow: 0 0 12px rgba(30,38,44,.4);
+  width: 100%;
+  max-width: 900px;
+  font-size: 48px;
+  line-height: 60px;
+  z-index: 2;
+}
+
+.header_wrapper a span {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  border-radius: 4px;
+  padding: 12px;
+  background: #22313c;
+  color: #c3c6ce;
+  cursor: pointer;
+  z-index: 2;
+}
+.header_wrapper a span:hover {
+  color: white;
+}
