@@ -1,262 +1,366 @@
-* {box-sizing: border-box}
-body {font-family: "Lato", sans-serif; margin: 0; display: flex; border: 0; background-color: #edf1f2;}
+* {
+  /* Свойства width и height включают в себя значения полей и границ, но не отступов (margin) */
+  box-sizing: border-box
+}
+body {
+  /* Установка шрифта */
+  font-family: "Lato", sans-serif; 
+  /* Отступов нет */
+  margin: 0; 
+  /* Горизонтальное расположение */
+  display: flex; 
+  /* Обводки нет */
+  border: 0; 
+  /* Цвет фона */
+  background-color: #edf1f2;
+}
 
-/* Style the tab */
 .tab {
+  /* Выравнивание элемента */
   float: left;
+  /* Цвет фона */
   background-color: #1e262c;
+  /* Длина 280px */
+  /* Высота равна высоте экрана */
   width: 280px;
   height: 100vh;
 }
 
-/* Style the buttons inside the tab */
 .tab button {
-  display: block;
+  /* Цвет фона наследуется у родителя */
   background-color: inherit;
+  /* Цвет текста */
   color: #e1e2e4;
-  padding-top: 22px;
-  padding-bottom: 22px;
-  padding-right: 16px;
-  padding-left: 16px;
+  /* Отступ сверху и снизу 22px, по бокам - 16px */
+  padding: 22px 16px;
+  /* Длина 100% */
   width: 100%;
+  /* Убираем обводку */
   border: none;
   outline: none;
+  /* Выравнивание текста */
   text-align: left;
+  /* Указатель, обозначающий ссылку */
   cursor: pointer;
+  /* Время перехода - 0.3 сек */
   transition: 0.3s;
+  /* Размер шрифта 17px */
   font-size: 17px;
+  /* Высота 64px */
   height: 64px; 
 }
 
-/* Change background color of buttons on hover */
 .tab button:hover {
+  /* Цвет фона */
   background-color: #2e363d;
 }
 
-/* Create an active/current "tab button" class */
 .tab button.active {
+  /* Цвет фона */
   background-color: #4c5259;
 }
 .tab button.active:before {
+  /* Пустой текстовый контент */
   content: '';
+  /* Абсолютное позиционирование */
   position: absolute;
+  /* Цвет обводки */
   border-color: #f56c2d;
+  /* Тип обводки - сплошная */
   border-style: solid;
+  /* Длина обводки */
   border-width: 0 0.3em 64px 0;
+  /* Нижний отступ 10px */
   margin-bottom: 10px;
+  /* Перемещение элемента */
   transform: translate(-16px,-22px);
+  /* Установка тени (тег -webkit - для браузера Safari; -moz - для браузера Mozilla) */
   -webkit-box-shadow: 0px 0px 10px 0px rgba(245,108,45,1);
   -moz-box-shadow: 0px 0px 10px 0px rgba(245,108,45,1);
   box-shadow: 0px 0px 10px 0px rgba(245,108,45,1);
 }
 
-/* Style the tab content */
 .tabcontent {
+  /* Убираем обводку */
   outline: none;
   border: none;
+  /* Убираем отступы */
   margin: 0;
   padding: 0;
+  /* Выравнивание элемента */
   float: left;
+  /* Длина 100% */
   width: 100%;
+  /* Высота равна высоте экрана */
   height: 100vh;
 }
 
-/* Style container of origin logo*/
 .container_originlogo {
+  /* Горизонтальное отображение */
   display: flex;
+  /* Центрирование элемента */
   align-items: center;
   justify-content: center;
 }
 
-/* Style origin logo*/
 .originlogo {
+  /* Высота 50px */
   height: 50px;
 }
   
 .grid {
-  display: -moz-grid;
-  display: -ms-grid;
-  width: calc(100vw-250px);
+  /* Отображение в виде сетки */
   display: grid;
+  /* Длина вычисляется так: длина экрана минус 250 пикселей */
+  width: calc(100vw-250px);
+  /* Автозаполнение сетки элементами каждые 266px */
   grid-template-columns: repeat(auto-fill, 266px);
+  /* Отступ между элементами 25px */
   grid-gap: 25px;  
 }
   
 .card:hover {
+  /* Увеличение элемента на 5 процентов */
   transform: scale(1.05, 1.05);
 }
 
 .card {
+  /* Радиус обводки */
   border-radius: 20px;
+  /* Длина 266px */
   width: 266px;
+  /* Высота 183px */
   height: 183px;
+  /* Установка тени (тег -webkit - для браузера Safari; -moz - для браузера Mozilla) */
   -webkit-box-shadow: 0px 0px 54px 0px rgba(0,0,0,0.15);
   -moz-box-shadow: 0px 0px 54px 0px rgba(0,0,0,0.15);
   box-shadow: 0px 0px 54px 0px rgba(0,0,0,0.15);
+  /* Фон может перемещаться вместе с содержимым */
   background-attachment:scroll;
-  background-clip:border-box;
-  background-color:rgb(20, 27, 32);
-  background-image:none;
-  background-origin:padding-box;
-  background-size:auto;
-  color:rgb(85, 26, 139);
-  cursor:pointer;
-  display:block;
-  font-family:"Open Sans", sans-serif;
-  height:183.984px;
-  list-style-type:none;
-  overflow-x:hidden;
-  overflow-y:hidden;
-  position:relative;
-  text-align:left;
-  text-decoration-color:rgb(0, 0, 238);
-  text-decoration-line:underline;
-  text-decoration-style:solid;
-  text-rendering:optimizelegibility;
-  transition-delay:0s;
-  transition-duration:0.15s;
-  transition-property:all;
-  transition-timing-function:ease-out;
-  width:266.699px;
+  /* Фон выводится под границами */
+  background-clip: border-box;
+  /* Цвет фона */
+  background-color: rgb(20, 27, 32);
+  /* Фон позиционируется относительно края элемента с учетом толщины границы */
+  background-origin: padding-box;
+  /* Автоматический размер фона */
+  background-size: auto;
+  /* Цвет текста */
+  color: rgb(85, 26, 139);
+  /* Указатель, обозначающий ссылку */
+  cursor: pointer;
+  /* Высота 184px */
+  height: 184px;
+  /* Отображается только область внутри элемента, остальное будет скрыто */
+  overflow-x: hidden;
+  overflow-y: hidden;
+  /* Позиционирование относительно родителя */
+  position: relative;
+  /* Выравнивание текста */
+  text-align: left;
+  /* Длительнось перехода к другому состоянию */
+  transition-duration: 0.15s;
+  /* Длина 267px */
+  width: 267px;
 }
   
 .card:after {
-  backface-visibility:hidden;
-  background-attachment:scroll;
-  background-clip:border-box;
-  background-color:rgba(0, 0, 0, 0);
-  background-image:linear-gradient(rgba(0, 0, 0, 0) 20%, rgba(20, 27, 32, 0.5) 60%, rgba(20, 27, 32, 0.8));
-  background-origin:padding-box;
-  background-size:auto;
-  bottom:0px;
-  content:"";
-  display:block;
-  height:183.984px;
-  left:0px;
-  position:absolute;
-  right:0px;
-  top:0px;
-  width:266.699px;  
+  /* Обратная сторона не видна, скрываясь за передней поверхностью элемента */
+  backface-visibility: hidden;
+  /* Позволяет перемещаться фону вместе с содержимым */
+  background-attachment: scroll;
+  /* Фон выводится под границами */
+  background-clip: border-box;
+  /* Цвет фона */
+  background-color: rgba(0, 0, 0, 0);
+  /* Градиентный фон */
+  background: linear-gradient(rgba(0, 0, 0, 0) 20%, rgba(20, 27, 32, 0.5) 60%, rgba(20, 27, 32, 0.8));
+  /* Фон позиционируется относительно края элемента с учетом толщины границы */
+  background-origin: padding-box;
+  /* Автоматический размер фона */
+  background-size: auto;
+  /* Пустой текстовый контент */
+  content: '';
+  /* Высота 184px */
+  height: 184px;
+  /* Абсолютное позиционирование */
+  position: absolute;
+  /* Отступ справа */
+  right: 0px;
+  /* Отступ слева */
+  left: 0px;
+  /* Отступ сверху */
+  top: 0px;
+  /* Отступ снизу */
+  bottom: 0px;
+  /* Длина 267px */
+  width: 267px;  
 }
   
 .card_img {
+  /* Позиционирование относительно родителя */
   position: relative;
+  /* Длина 100% */
   width: 100%;
+  /* Высота 100% */
   height: 100%;
-  background-attachment:scroll;
-  bottom:-91.9922px;
-  color:rgb(85, 26, 139);
-  cursor:pointer;
-  display:block;
-  font-family:"Open Sans", sans-serif;
-  height:183.984px;
-  left:133.34px;
-  list-style-type:none;
-  position:absolute;
-  right:-602.578px;
-  text-align:left;
-  text-rendering:optimizelegibility;
-  top:91.9922px;
-  transform:matrix(1, 0, 0, 1, -367.5, -91.875);
-  width:735.938px;
+  /* Позволяет перемещаться фону вместе с содержимым */
+  background-attachment: scroll;
+  /* Отступ снизу */
+  bottom: -92px;
+  /* Цвет текста */
+  color: rgb(85, 26, 139);
+  /* Указатель, обозначающий ссылку */
+  cursor: pointer;
+  /* Высота 184px */
+  height: 184px;
+  /* Отступ слева */
+  left: 133px;
+  /* Отступ справа */
+  right: -602px;
+  /* Выравнивание текста */
+  text-align: left;
+  /* Отступ сверху */
+  top: 92px;
+  /* Перемещение в центр */
+  transform: matrix(1, 0, 0, 1, -367.5, -91.875);
+  /* Длина 736px */
+  width: 736px;
 }
   
 .card_details {
-  backface-visibility:hidden;
-  bottom:0px;
-  box-sizing:border-box;
-  color:rgb(255, 0, 0);
-  cursor:pointer;
-  display:block;
-  font-family:"Open Sans", sans-serif;
-  left:0px;
-  list-style-type:none;
-  padding-bottom:12px;
-  padding-left:12px;
-  padding-right:12px;
-  padding-top:12px;
-  position:absolute;
-  text-align:left;
-  text-rendering:optimizelegibility;
-  transform:matrix(1, 0, 0, 1, 0, 0);
-  width:266.699px;
-  z-index:1;
+  /* Обратная сторона не видна, скрываясь за передней поверхностью элемента */
+  backface-visibility: hidden;
+  /* Отступ снизу */
+  bottom: 0px;
+  /* Свойства width и height включают в себя значения полей и границ, но не отступов (margin) */
+  box-sizing: border-box;
+  /* Цвет текста */
+  color: rgb(255, 0, 0);
+  /* Указатель, обозначающий ссылку */
+  cursor: pointer;
+  /* Отступ слева */
+  left: 0px;
+  /* Отступ 12px */
+  padding: 12px;
+  /* Абсолютное позиционирование */
+  position: absolute;
+  /* Выравнивание текста */
+  text-align: left;
+  /* Перемещение в центр  */
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  /* Длина 267px */
+  width: 267px;
+  /* Индекс элемента выше */
+  z-index: 1;
 }
   
 .card_details h1 {
-  color:rgb(255, 255, 255);
-  cursor:pointer;
-  display:-webkit-box;
-  font-family:"Open Sans", sans-serif;
-  font-size:18px;
-  font-weight:400;
-  height:45.5px;
-  line-height:24px;
-  list-style-type:none;
-  margin-bottom:0px;
-  margin-left:0px;
-  margin-right:0px;
-  margin-top:0px;
-  max-height:72px;
-  overflow-x:hidden;
-  overflow-y:hidden;
-  text-align:left;
-  text-rendering:optimizelegibility;
-  width:242.715px;
+  /* Цвет текста 267px */
+  color: rgb(255, 255, 255);
+  /* Указатель, обозначающий ссылку */
+  cursor: pointer;
+  /* Размер шрифта */
+  font-size: 18px;
+  /* Жирность текста */
+  font-weight: 400;
+  /* Высота */
+  height: 45.5px;
+  /* Высота линии */
+  line-height: 24px;
+  margin: 0;
+  /* Максимальная высота */
+  max-height: 72px;
+  /* Отображается только область внутри элемента, остальное будет скрыто */
+  overflow-x: hidden;
+  overflow-y: hidden;
+  /* Выравнивание текста */
+  text-align: left;
+  /* Длина 243px */
+  width: 243px;
 }
 
 .header_wrapper {
+  /* Высота 100% */
   height: 100%;
+  /* Длина 100% */
   width: 100%;
+  /* Выравнивание текста */
   text-align: center;
+  /* Позиционирование относительно родителя */
   position: relative;
+  /* Горизонтальное отображение */
   display: flex;
+  /* Центрирование элемента */
   align-items: center;
   justify-content: center;
+  /* Фоновая картинка */
   background: url("https://data2.origin.com/content/dam/originx/web/app/programs/About/aboutorigin_3840x2160_SWB.jpg") no-repeat;
+  /* Масштабирует изображение с сохранением пропорций так, чтобы его ширина или высота равнялась ширине или высоте блока */
   background-size: cover;
+  /* Индекс элемента выше */
   z-index: 1;
 }
 
 .header_wrapper :after {
-  background-image:linear-gradient(rgba(0, 0, 0, 0) 20%, rgba(20, 27, 32, 0.2) 60%, rgba(20, 27, 32, 0.4));
-  content:"";
-  position:absolute;
-  left:0px;
-  bottom:0px;
-  right:0px;
-  top:0px;
+  /* Градиентный фон */
+  background: linear-gradient(rgba(0, 0, 0, 0) 20%, rgba(20, 27, 32, 0.2) 60%, rgba(20, 27, 32, 0.4));
+  /* Текстовый контент пустой */
+  content: '';
+  position: absolute;
+  /* Отступы везде убираем (центрируем) */
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  top: 0px;
+  /* Индекс элемента выше */
   z-index: 1;
 }
 
 .header_wrapper h1 {
-  padding-left: 45px;
-  padding-right: 45px;
+  /* Отступ по бокам 45px */
+  padding: 0px 45px;
+  /* Цвет текста */
   color: #fff;
+  /* Тень текста */
   text-shadow: 0 0 12px rgba(30,38,44,.4);
+  /* Длина 100% */
   width: 100%;
+  /* Максимальная длина 900px */
   max-width: 900px;
+  /* Размер шрифта */
   font-size: 48px;
+  /* Высота линии */
   line-height: 60px;
+  /* Индекс элемента */
   z-index: 2;
 }
 
 .header_wrapper a span {
+  /* Абсолютное позиционирование */
   position: absolute;
+  /* Отступ снизу */
   bottom: 40px;
+  /* Отступ справа */
   right: 40px;
+  /* Радиус закругления */
   border-radius: 4px;
+  /* Отступ */
   padding: 12px;
+  /* Цвет фона */
   background: #22313c;
+  /* Цвет текста */
   color: #c3c6ce;
+  /* Указатель, обозначающий ссылку */
   cursor: pointer;
+  /* Индекс элемента */
   z-index: 2;
-  transition-delay:0s;
-  transition-duration:0.15s;
-  transition-property:all;
-  transition-timing-function:ease-out;
+  /* Длительнось перехода к другому состоянию */
+  transition-duration: 0.15s;
 }
 .header_wrapper a span:hover {
+  /* Цвет текста белый */
   color: white;
+  /* Переход */
   transition: color .3s ease-out;
 }
