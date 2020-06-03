@@ -4,6 +4,7 @@
 <title>Игры</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="css/style_index.css" type="text/css" rel="stylesheet">
+<script src="scripts/tabs.js" type="text/javascript"></script>
 </head>
 <body>
 
@@ -336,25 +337,11 @@
 <iframe id="game_info_shio" class="tabcontent" src="game_shio.html">
     Ваш браузер не поддерживает плавающие фреймы!
 </iframe>
-
+   
 <script>
-function openTab(evt, openName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(openName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-
-// Get the element with id="defaultOpen" and click on it
+<!-- Открыть вкладку по умолчанию -->
 document.getElementById("defaultOpen").click();
 </script>
-   
+
 </body>
 </html>

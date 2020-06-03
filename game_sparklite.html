@@ -4,6 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <link href="css/style_game.css" type="text/css" rel="stylesheet">
+<script src="scripts/overlay.js" type="text/javascript"></script>
 <style>
 
 .top_header_image {
@@ -112,25 +113,6 @@
 </div>
 
 </div>
-
-<script>
-function close_overlay() {
-  document.getElementById('overlay_image').style.display = "none";
-  
-  window.onscroll = function() {};
-}
-function open_overlay(evt) {
-  document.getElementById('overlay_image').style.display = "block";
-  document.getElementById('overlay_image').innerHTML = '<img src='+evt.currentTarget.src+' width="70%"/>';
-  
-  window.scrollTo(0, 0); 
-  scrollTop = window.pageYOffset || document.documentElement.scrollTop; 
-  scrollLeft = window.pageXOffset || document.documentElement.scrollLeft, 
-  window.onscroll = function() { 
-    window.scrollTo(scrollLeft, scrollTop); 
-  }; 
-}
-</script>
 
 </body>
 </html>
