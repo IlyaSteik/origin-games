@@ -1,0 +1,12 @@
+{
+  "name": "web",
+  "description": "",
+  "main": "index.html",
+  "homepage": "./",
+  "scripts": {
+    "deploy": "gh-pages-deploy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}
