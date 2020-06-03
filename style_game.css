@@ -1,0 +1,209 @@
+body{
+  /* Убираем отступы от края экрана */
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  /* Устанавливаем цвет фона */
+  background-color: #edf1f2;
+}
+
+.top_header {
+  /* Цвет фона */
+  background-color:rgb(30, 38, 44);
+  /* Высота 450 px */
+  min-height:450px;
+  /* Положение элемента относительно родителя */
+  position:relative;
+  /* Длина 100% */
+  width:100%;
+  /* Убираем отступы от краёв */
+  margin: 0;
+  padding: 0;
+}
+
+.buttons {
+  /* Цвет фона */
+  background-color: #1e262c;
+  /* Длина 100% */
+  width: 100%;
+}
+
+.button {
+  /* Цвет фона такой же, как и у родителя */
+  background-color: inherit;
+  /* Цвет текста */
+  color: #e1e2e4;
+  /* Убираем обводку */
+  border: none;
+  outline: none;
+  /* Выравнивание текста - по центру */
+  text-align: center;
+  /* Указатель, обозначающий ссылку */
+  cursor: pointer;
+  /* Время перехода - 0.3 сек */
+  transition: 0.3s;
+  /* Размер шрифта 17px */
+  font-size: 17px;
+  /* Высота 64px */
+  height: 64px; 
+  /* Боковой отступ - 20px */
+  padding: 0px 20px;
+}
+
+.button:hover {
+  /* Цвет фона (при нажатом состоянии) */
+  background-color: #2e363d;
+}
+
+.card {
+  /* Радиус закругления */
+  border-radius: 8px;
+  /* Цвет фона - белый */
+  background-color: white;
+  /* Отступ от краёв 22px */
+  margin: 22px;
+  /* Верхний и нижний отступ - 8px, левый и правый - 22px */
+  padding: 8px 22px;
+  /* Сплошная обводка в 1 пиксель */
+  border: 1px solid #dfe4e5;
+  /* Тень (-webkit - тег для браузера Safari; -moz - для браузера Mozilla) */
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.05);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.05);
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.05);
+}
+
+.column {
+  /* Кол-во колонн равное трём */
+  column-count: 3;
+}
+
+h3 {
+  /* Боковой отступ 22px */
+  padding: 0px 22px;
+}
+
+.screens_grid {
+  /* Элементы будут показаны в виде сетки */
+  display: grid;
+  /* Самозаполняющаяся сетка (размещение элементов каждые 315px) */
+  grid-template-columns: repeat(auto-fill, 315px);
+  /* Отступ от элементов 15px */
+  grid-gap: 15px;  
+  /* Боковой отступ 22px */
+  margin: 0px 22px;
+}
+
+.screen {
+  /* Длина 315px */
+  width: 315px;
+  /* Высота 177px */
+  height: 177px;
+  /* Размер фона 100% (тег -moz для браузера Mozilla; тег -webkit для браузера Safari) */
+  -moz-background-size: 100%;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+  /* Указатель, обозначающий ссылку */
+  cursor: pointer;
+}
+
+table {
+  /* Длина 100% */
+  width: 100%;
+  /* Граница и фон в пустых ячейках не отображается */
+  empty-cells: hide;
+}
+
+th {
+  /* Верхний и нижний отступ 12px, по бокам 8px */
+  padding: 12px 8px;
+}
+
+td {
+  /* Верхний и нижний отступ 10px, по бокам 6px */
+  padding: 10px 6px;
+}
+
+.centered {
+  /* Этот класс сделан для того, чтобы выровнять элемент по центру */
+  
+  /* Горизонтальное отображение */
+  display: flex;
+  /* Центрирование элемента */
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  /* Длина 100% */
+  width: 100%;
+  /* Боковой отступ 20px */
+  padding: 0 20px;
+  /* Нижний отступ 10px */
+  margin-bottom: 10px;
+  /* Цвет фона */
+  background-color: #E9EFF6;
+  /* Высота линии (шрифта) */
+  line-height: 40px;
+  /* Длина обводки (закругления) равна нулю */
+  border-width: 0;
+  /* Закругление 20px */
+  border-radius: 20px;
+}
+
+textarea {
+  /* Длина 100% */
+  width: 100%;
+  /* Боковой отступ 20px */
+  padding: 0 20px;
+  /* Нижний отступ 10px */
+  margin-bottom: 10px;
+  /* Цвет фона */
+  background-color: #E9EFF6;
+  /* Высота линии (шрифта) */
+  line-height: 20px;
+  /* Длина обводки (закругления) равна нулю */
+  border-width: 0;
+  /* Закругление 20px */
+  border-radius: 20px;
+}
+
+input[type="submit"] {
+  /* Верхний отступ 30px */
+  margin-top: 30px;
+  /* Цвет фона */
+  background-color: #f69a73;
+  /* Нижняя сплошная обводка в 4 px */
+  border-bottom: 4px solid #d87d56;
+  /* Цвет текста белый */
+  color: white;
+  /* Размер шрифта 14px */
+  font-size: 14px;
+}
+
+#overlay_image {
+  /* Длина 100% */
+  width: 100%;
+  /* Высота 100% */
+  height: 100%;
+  /* Цвет фона */
+  background-color: rgba(0, 0, 0, .5);
+  /* Абсолютное позиционирование */
+  position: absolute;
+  /* Элемент скрыт */
+  display: none;
+  /* Индекс элемента самый высокий (отображается поверх всех элементов) */
+  z-index: 100;
+  /* Отображается только область внутри элемента, остальное будет скрыто */
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+#overlay_image img {
+  /* Абсолютное позиционирование */
+  position: absolute;
+  /* Отступ сверху 50% */
+  top: 50%;
+  /* Отступ слева 50% */
+  left: 50%;
+  /* Перемещение объекта в центр */
+  transform: translate(-50%, -50%);
+}
