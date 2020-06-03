@@ -24,8 +24,6 @@ body{
 .buttons {
   /* Цвет фона */
   background-color: #1e262c;
-  /* Высота 70px */
-  height: 70px;
   /* Длина 100% */
   width: 100%;
 }
